@@ -1,7 +1,7 @@
 <template>
 	<div class="container m-auto">
-		Главная страница
-		<!-- <p>{{ $t("message.hello") }}</p> -->
+		<p>{{$t('main-page')}}</p>
+		<p>{{$t('hello')}}</p>
 	</div>
 </template>
 
