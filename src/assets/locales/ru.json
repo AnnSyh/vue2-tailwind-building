@@ -2,5 +2,14 @@
     "hello": "Привет, мой друг",
     "main-page": "Главная страница",
     "main": "Главная",
-    "photos": "Фотографии"
+    "photos": "Фотографии",
+    "portfolio": "Портфолио",
+    "articles": "Статьи",
+    "questions": "Вопросы",
+    "achievements": "Достижения",
+    "education": "Образование",
+    "extracurricularActivitiesAndAchievements": "Внеучебная деятельность и достижения",
+    "skills": "Навыки",
+    "experience": "Опыт работы",
+    "personalInterests": "Персональные интересы"
   }

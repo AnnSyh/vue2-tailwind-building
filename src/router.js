@@ -13,6 +13,10 @@ const routes = [
 	{
 		path: '/photo',
 		component: () => import('./components/pages/PhotosPage.vue')
+	},
+	{
+		path: '/portfolio',
+		component: () => import('./components/pages/PortfolioPage.vue')
 	}
 
 ]

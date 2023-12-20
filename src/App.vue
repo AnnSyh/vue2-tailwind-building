@@ -1,5 +1,5 @@
 <template>
-	<div id="app" :class="{'dark': isDarkMode}" class="dark:bg-gray-700 dark:text-white">
+	<div id="app" :class="{'dark': isDarkMode}" class="h-screen dark:bg-gray-700 dark:text-white">
 		<Navbar />
 		<router-view/>
 	</div>

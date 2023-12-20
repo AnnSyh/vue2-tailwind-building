@@ -2,5 +2,14 @@
     "hello": "Hello, my friend",
     "main-page": "Main Page",
     "main": "Main",
-    "photos": "Photos"
+    "photos": "Photos",
+    "portfolio": "Portfolio",
+    "articles": "Articles",
+    "questions": "Questions",
+    "achievements": "Achievements",
+    "education": "Education",
+    "extracurricularActivitiesAndAchievements": "Extracurricular activities and achievements",
+    "skills": "Skills",
+    "experience": "Experience",
+    "personalInterests": "PersonalInterests"
   }
