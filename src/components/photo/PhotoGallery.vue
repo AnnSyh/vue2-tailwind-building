@@ -1,8 +1,15 @@
 <template>
 	<div>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			<div v-for="(image, index) in photos" :key="index" class="flex flex-col items-center p-6">
-				<img width="200" height="200" :src="image.url" @click="showModalWindow(index)" class="cursor-pointer">
+			<div v-for="(image, index) in photos" 
+				:key="index" 
+				class="flex flex-col items-center p-6"
+			>
+				<img 	width="200" height="200" 
+						:src="image.url" 
+						@click="showModalWindow(index)" 
+						class="cursor-pointer"
+				>
 			</div>
 		</div>
 
