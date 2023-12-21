@@ -22,6 +22,7 @@
 				<span class="mx-1">&bull;</span>
 				<span>May 4, 2020</span>
 			</div> -->
+			<TagsBlock :tags="article.tags"/>
 			<h3 class="font-semibold text-gray-800 my-4 hover:underline text-lg dark:text-white">
 				{{article.title}}
 			</h3>
@@ -43,8 +44,12 @@
 </template>
 
 <script>
+import TagsBlock from '@/components/TagsBlock.vue'
 
 export default {
+	components: {
+		TagsBlock,
+	},
 	props: {
 		article: {
 			type: Object,

@@ -6,10 +6,11 @@
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
 					{{$t('RecentArticles')}}:
 				</h2>
+				<!-- <div>{{postsCount}}</div> -->				
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-				<ArticleCard v-for="(article, index) in articles" 
+				<ArticleCard v-for="(article, index) in allArticles" 
 					:key="index" 
 					:article="article"
 				/>
@@ -21,16 +22,17 @@
 
 <script>
 import ArticleCard from '@/components/article/ArticleCard.vue'
-import articles from '../../mocks/articles'
+import  {mapGetters, mapActions} from 'vuex'
 
 export default {
 	components: {
-		ArticleCard
+		ArticleCard,
 	},
-	data() {
-		return {
-			articles
-		}
+	computed: mapGetters(['allArticles','postsCount']),
+	methods: mapActions(['fetchArticles']),
+	async mounted(){
+		// this.$store.dispatch('fetchArticles')
+		this.fetchArticles(4)
 	}
 }
 	

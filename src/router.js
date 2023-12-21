@@ -19,6 +19,10 @@ const routes = [
 		component: () => import('./components/pages/PortfolioPage.vue')
 	},
 	{
+		path: '/achievements',
+		component: () => import('./components/pages/AchievementsPage.vue')
+	},
+	{
 		path: '/articles',
 		component: () => import('./components/pages/ArticlesPage.vue')
 	},

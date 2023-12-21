@@ -2,6 +2,7 @@
 	<div class="container mx-auto">
 
 		<div class="my-12 px-4 ">
+			<!-- <p>allArticles = {{allArticles}}</p> -->
 			<h1 class="text-2xl md:text-3xl mb-8 mt-16 font-serif max-w-3xl mx-auto dark:text-white">
 				<!-- Статья {{id}}:<br> -->
 				{{article.title}}
@@ -10,31 +11,7 @@
 				<a href="/articles" class="text-indigo-600 text-sm hover:underline">
 					<span class="inline-block transform rotate-180">→</span> Все статьи 
 				</a>
-				<div class="flex gap-2">
-					<div class="text-center">
-						<span class="text-gray-500 bg-gray-200 h-10 rounded px-2 py-1 text-xs select-none">
-						Info
-						</span>
-					</div>
-	
-					<div class="text-center">
-						<span class="text-green-500 bg-green-200 h-10 rounded px-2 py-1 text-xs select-none">
-						Success
-						</span>
-					</div>
-	
-					<div class="text-center">
-						<span class="text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs select-none">
-						Danger
-						</span>
-					</div>
-	
-					<div class="text-center">
-						<span class="text-yellow-500 bg-yellow-200 h-10 rounded px-2 py-1 text-xs select-none">
-						Warning
-						</span>
-					</div>
-				</div>
+				<TagsBlock/>
 			</div>
 			<div v-if="article.url">
 				<img  :src="article.url" :alt=article.title class="w-80 h-80 float-left mr-4 mb-4">
@@ -47,27 +24,39 @@
 </template>
 
 <script>
-import articles from '../../mocks/articles'
+// import articles from '../../mocks/articles'
+import TagsBlock from '@/components/TagsBlock.vue'
+import  {mapGetters, mapActions} from 'vuex'
 
 export default {
-
+	components: {
+		TagsBlock
+	},
 	data() {
-			return {
-				id: this.$router.currentRoute.params['id'],
-				// id: this.$route.params['id']
-			};
-		},
-		watch: {
-			$route(toR){
-				this.id = toR.params['id']
-			}
-		},
-		created() {
-			const article = articles.find(article => article.id == this.$route.params.id)
-			if (article) {
-			this.article = article
-			}
+		return {
+			id: this.$router.currentRoute.params['id'],
+			// id: this.$route.params['id']
+		};
+	},
+	watch: {
+		$route(toR){
+			this.id = toR.params['id']
 		}
+	},
+	computed: {
+		...mapGetters(['allArticles'])
+	},
+	methods: mapActions(['fetchArticles']),
+	created() {
+		// console.log('allArticles = ', this.allArticles)
+		// console.log('articles = ', articles)
+		// console.log('this.$route.params.id = ', this.$route.params.id)
+
+		const article = this.allArticles.find(article => article.id == this.$route.params.id)
+		if (article) {
+		this.article = article
+		}
+	},
 
 }
 	

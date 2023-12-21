@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import store from './store'
 import App from './App.vue'
 import './tailwind.css'
 import router from './router'
@@ -11,6 +12,10 @@ Vue.config.productionTip = false
 Vue.prototype.axios = axios
 Vue.use(VueI18n)
 
+Vue.filter('to-uppercase', function(value){
+	return value.toUpperCase();
+})
+
 	// Готовые переводы сообщений локализаций
 	const messages = {
 		en,
@@ -19,14 +24,15 @@ Vue.use(VueI18n)
 
 	// Создание экземпляра VueI18n с настройками
 	const i18n = new VueI18n({
-    locale: 'en', // установка локализации по умолчанию
-    messages // установка сообщений локализаций
-    })
+	locale: 'en', // установка локализации по умолчанию
+	messages // установка сообщений локализаций
+	})
 
 	Vue.config.productionTip = false
 
 new Vue({
-  router,
-  i18n,
-  render: h => h(App),
+	store,
+	router,
+	i18n,
+	render: h => h(App),
 }).$mount('#app')
