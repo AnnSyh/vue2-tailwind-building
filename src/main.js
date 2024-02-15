@@ -8,6 +8,7 @@ import VueI18n from 'vue-i18n'
 import en from "../src/assets/locales/en.json";
 import ru from "../src/assets/locales/ru.json";
 import VueFormulate from "@braid/vue-formulate";
+import '@fortawesome/fontawesome-free/css/all.css'
 // import './VueFormulate.config.js'
 
 

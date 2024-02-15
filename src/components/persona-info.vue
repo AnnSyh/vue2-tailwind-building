@@ -1,6 +1,6 @@
 <template>
     <div class="pl-4 pb-4">
-        <img src="@/assets/images/IMG_ivan.jpg" alt="Сухаревский Иван Иванович" class="max-w-xl mb-4">
+        <img src="@/assets/images/IMG_ivan.jpg" alt="Сухаревский Иван Иванович" class="max-w-xl mb-4 w-full">
         <h1>Сухаревский Иван Иванович</h1>
         <a href="tel:79889502395"> +7 (988) 950 23 95</a><br>
         <a href="mailto:ivan.suharevskiy@gmail.com">ivan.suharevskiy@gmail.com</a>
@@ -16,10 +16,10 @@
         </ul>
         <div class="flex justify-between">
             <a href="http://mylaw.fun/wp-content/uploads/2022/09/RESUME.pdf" target="_blank">
-                <i class="fa fa-download"></i>Скачать портфолио(english)
+                <i class="fa fa-download text-green-400 dark:text-yellow-400 mr-2"></i>Скачать портфолио(english)
             </a>
             <a href="http://mylaw.fun/wp-content/uploads/2023/01/RESUMERus150123.pdf" target="_blank" >
-                <i class="fa fa-download"></i>Скачать портфолио(рус)
+                <i class="fa fa-download text-green-400 dark:text-yellow-400 mr-2"></i>Скачать портфолио(рус)
             </a>
         </div>
     </div>
