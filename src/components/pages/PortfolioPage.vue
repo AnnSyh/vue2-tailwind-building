@@ -13,22 +13,12 @@
 				</button>
 			</div>
 			<component :is="tabs[currentTab]" class="tab"></component>
-
-			<button class="mt-4 flex px-4 py-2 items-center rounded-lg p-1 duration-300 ease-in-out bg-green-400 dark:bg-yellow-400 text-white max-w-max"
-					@click="showModalWindow()" 
-			>
-				Связаться со мной
-			</button>
 		</div>
-
-
-		<ModalWindowConnect :show="showModal" @close="closeModal" />
 
 	</div>
 </template>
 
 <script>
-import ModalWindowConnect from '@/components/ModalWindowConnect.vue';
 import PersonalInterests from '@/components/personal-interests.vue';
 import Personalnfo from '@/components/persona-info';
 import EducationInfo from '@/components/education-info';
@@ -39,7 +29,6 @@ import { ref } from 'vue';
 
 export default {
 	components: {
-		ModalWindowConnect,
 		Personalnfo,
 		Skills,
 		ExtracurricularActivitiesAndAchievements,

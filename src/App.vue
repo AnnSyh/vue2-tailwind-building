@@ -2,11 +2,14 @@
 	<div id="app" :class="{'dark': isDarkMode}" class="h-screen dark:bg-gray-700 dark:text-white">
 		<Navbar />
 		<router-view/>
+		<Footer />
+
 	</div>
 </template>
 
 <script>
 import Navbar from  "@/components/NavBar.vue"
+import Footer from  "@/components/footer-one"
 
 export default {
 	name: 'App',
@@ -17,6 +20,7 @@ export default {
 	},
 	components: {
 		Navbar,
+		Footer,
 	}
 }
 </script>
