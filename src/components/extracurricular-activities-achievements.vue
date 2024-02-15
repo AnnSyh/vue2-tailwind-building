@@ -10,7 +10,7 @@
             <span class="whitespace-nowrap"> Май 2022</span></li>
             <li class="flex justify-between">- Участник очного этапа чемпионата «Gardium IP Moot Court»
             <span class="whitespace-nowrap">Февр 2022</span></li>
-            <li class="flex justify-between"><span>- <a href="http://mylaw.fun/wp-content/uploads/2021/11/PenPaper-scaled.jpg" data-fancybox="images">Полуфиналист
+            <li class="flex justify-between"><span>- <a class="text-indigo-600 text-xs uppercase hover:underline" target="_blank" href="http://mylaw.fun/wp-content/uploads/2021/11/PenPaper-scaled.jpg" data-fancybox="images">Полуфиналист
             всероссийского кейс-чемпионата по семейному праву «Kutafin Legal Cup»</a></span> <span class="whitespace-nowrap">Нояб 2021</span></li>
             <li class="flex justify-between">- Автор научной статьи «Проблемы введения муниципальных округов в Российской Федерации» <span class="whitespace-nowrap">Нояб
             2020</span></li>

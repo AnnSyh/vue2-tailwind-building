@@ -2,7 +2,7 @@
   <div>
     <p>
         <b>Адвокатское бюро г.Москвы «Инфралекс»</b> (11.10.2022 – 24.11.2022), должность – стажер в практике разрешения споров<br>
-        <a href="http://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf" target="_blank" rel="noopener">Рекомендательное письмо <i class="icon-exit-top-right mr-1"></i></a>
+        <a class="text-indigo-600 text-xs uppercase hover:underline" href="http://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf" target="_blank" rel="noopener">Рекомендательное письмо <i class="icon-exit-top-right mr-1"></i></a>
     </p>
     <ul class="work-experience" >
         <li>- Подготовка различных процессуальных документов (ходатайства, жалобы, объяснения) от имени адвокатов</li>
