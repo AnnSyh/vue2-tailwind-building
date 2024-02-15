@@ -8,9 +8,15 @@
     "questions": "Вопросы",
     "achievements": "Достижения",
     "education": "Образование",
-    "extracurricularActivitiesAndAchievements": "Внеучебная деятельность и достижения",
+    "extracurricularActivitiesAndAchievements": "Достижения",
+    "ExtracurricularActivitiesAndAchievements": "Достижения",
     "skills": "Навыки",
+    "Skills": "Навыки",
     "experience": "Опыт работы",
+    "Experience": "Опыт работы",
     "personalInterests": "Персональные интересы",
-    "RecentArticles": "Последние статьи"
+    "PersonalInterests": "Персональные интересы",
+    "RecentArticles": "Последние статьи",
+    "Personalnfo": "Персональная информация",
+    "EducationInfo": "Образование"
   }

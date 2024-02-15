@@ -7,10 +7,32 @@ import axios from "axios"
 import VueI18n from 'vue-i18n'
 import en from "../src/assets/locales/en.json";
 import ru from "../src/assets/locales/ru.json";
+import VueFormulate from "@braid/vue-formulate";
+// import './VueFormulate.config.js'
+
 
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
 Vue.use(VueI18n)
+// Vue.use(VueFormulate)
+Vue.use(VueFormulate, {
+	classes: {
+		error: 'text-purple-600'
+	},
+	errorMessages: {
+		required: 'Это поле обязательно для заполнения',
+		email: 'Пожалуйста, введите корректный адрес электронной почты'
+		// Другие кастомные сообщения об ошибках
+	}
+  })
+
+// Vue.use(VueFormulate, {
+// 	errorMessages: {
+// 		required: 'Это поле обязательно для заполнения',
+// 		email: 'Пожалуйста, введите корректный адрес электронной почты'
+// 		// Другие кастомные сообщения об ошибках
+// 	}
+//   })
 
 Vue.filter('to-uppercase', function(value){
 	return value.toUpperCase();

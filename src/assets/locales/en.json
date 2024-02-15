@@ -9,8 +9,14 @@
     "achievements": "Achievements",
     "education": "Education",
     "extracurricularActivitiesAndAchievements": "Extracurricular activities and achievements",
+    "ExtracurricularActivitiesAndAchievements": "Extracurricular activities and achievements",
     "skills": "Skills",
+    "Skills": "Skills",
     "experience": "Experience",
+    "Experience": "Experience",
     "personalInterests": "PersonalInterests",
-    "RecentArticles": "Recent Articles"
+    "PersonalInterests": "PersonalInterests",
+    "RecentArticles": "Recent Articles",
+    "Personalnfo": "Personal Info",
+    "EducationInfo": "Education Info"
   }
