@@ -1,12 +1,20 @@
 <template>
 	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white">
 		<p>AchievementsPage</p>
+		<ThreeSix/>
 	</div>
 </template>
 
 <script>
-export default {
+import ThreeSix from '@/components/three/six-three_old.vue';
 
+export default {
+	components: {
+		ThreeSix, 
+
+		// ThreeFirst, 
+		// ThreeFour,
+	},
 	data() {
 		return {
 			currentImageIndex: 0,
