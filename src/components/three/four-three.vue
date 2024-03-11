@@ -8,7 +8,7 @@ import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls
 // import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // import { CSS3DRenderer} from 'three/addons/renderers/CSS3DRenderer.js';
-import {  CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
+// import {  CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
 
 
@@ -60,36 +60,36 @@ export default {
       // this.scene.add(this.cube);
 
 
-      const verticesOfCube = [
-          -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
-          -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
-      ];
-      const indicesOfFaces = [
-          2,1,0,    0,3,2,
-          0,4,7,    7,3,0,
-          0,1,5,    5,4,0,
-          1,2,6,    6,5,1,
-          2,3,7,    7,6,2,
-          4,5,6,    6,7,4
-      ];
-      // const radius = 7;  
-      // const detail = 2; 
+      // const verticesOfCube = [
+      //     -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
+      //     -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
+      // ];
+      // const indicesOfFaces = [
+      //     2,1,0,    0,3,2,
+      //     0,4,7,    7,3,0,
+      //     0,1,5,    5,4,0,
+      //     1,2,6,    6,5,1,
+      //     2,3,7,    7,6,2,
+      //     4,5,6,    6,7,4
+      // ];
+      // // const radius = 7;  
+      // // const detail = 2; 
 
-      const polyhedronGeometry = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces);
-      // // Создание материала
+      // const polyhedronGeometry = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces);
+      // // // Создание материала
       const materialPoly = new THREE.MeshBasicMaterial({color: 0xff0000});
-      // // Создание меша
-      const polyhedronMesh = new THREE.Mesh(polyhedronGeometry, materialPoly);
-      // // Добавление меша на сцену
-      this.scene.add(polyhedronMesh);
+      // // // Создание меша
+      // const polyhedronMesh = new THREE.Mesh(polyhedronGeometry, materialPoly);
+      // // // Добавление меша на сцену
+      // this.scene.add(polyhedronMesh);
 
-      // const radius = 7;  
-      // // const detail = 1; 
-      // // const dodecahedron = new THREE.IcosahedronGeometry(radius, detail);
-      // // const dodecahedron = new THREE.IcosahedronGeometry(radius);
-      // const dodecahedron = new THREE.OctahedronGeometry(radius);
-      // const dodecahedronMesh = new THREE.Mesh(dodecahedron, materialPoly);
-      // this.scene.add(dodecahedronMesh);
+      const radius = 7;  
+      // const detail = 1; 
+      // const dodecahedron = new THREE.IcosahedronGeometry(radius, detail);
+      // const dodecahedron = new THREE.IcosahedronGeometry(radius);
+      const dodecahedron = new THREE.OctahedronGeometry(radius);
+      const dodecahedronMesh = new THREE.Mesh(dodecahedron, materialPoly);
+      this.scene.add(dodecahedronMesh);
 
 
 
@@ -101,8 +101,8 @@ export default {
     //   const icosahedron = new THREE.IcosahedronGeometry(5, 0);
      // Выделяем ребра геометрии
       // const edges = new THREE.EdgesGeometry(icosahedron);  
-      // const edges = new THREE.EdgesGeometry(dodecahedron);  
-      const edges = new THREE.EdgesGeometry(polyhedronGeometry);  
+      const edges = new THREE.EdgesGeometry(dodecahedron);  
+      // const edges = new THREE.EdgesGeometry(polyhedronGeometry);  
       // Создаем объект Lines и применяем к нему материал
       const edgesLines = new THREE.LineSegments(edges, yellowMaterial);
       // Добавляем объект на сцену
@@ -112,15 +112,15 @@ export default {
     //   window.addEventListener( 'resize', this.onWindowResize );
 
 
-      // Создаем div с текстом 
-      const textDiv = document.createElement( 'div' );
-      textDiv.style = "width: 200px; height:200px; border: 1px solid red;background-color:#ccc;padding:20px;"
-      textDiv.textContent = "I am a <div> element intersecting a WebGL sphere.\n\nThis text is editable!";
-      const object = new CSS3DObject( textDiv );
-      object.position.set(  0, 0, 240, 0 );
-      // Добавляем текстовый объект на сцену
-      this.scene.add( object );
-      console.log(textDiv)
+      // // Создаем div с текстом 
+      // const textDiv = document.createElement( 'div' );
+      // textDiv.style = "width: 200px; height:200px; border: 1px solid red;background-color:#ccc;padding:20px;"
+      // textDiv.textContent = "I am a <div> element intersecting a WebGL sphere.\n\nThis text is editable!";
+      // const object = new CSS3DObject( textDiv );
+      // object.position.set(  0, 0, 240, 0 );
+      // // Добавляем текстовый объект на сцену
+      // this.scene.add( object );
+      // console.log(textDiv)
 
    
     },
