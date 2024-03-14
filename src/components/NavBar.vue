@@ -15,7 +15,7 @@
 					id="navigation"
 				>
 					<div
-						class="absolute bg-gray-800 rounded-lg lg:relative lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center items-start flex flex-col lg:h-auto"
+						class="absolute bg-gray-800 rounded-lg lg:relative lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center items-start flex flex-col lg:h-auto z-10"
 					>
 					<router-link to="/" 
 						class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
