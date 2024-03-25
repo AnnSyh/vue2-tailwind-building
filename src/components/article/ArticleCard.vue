@@ -22,19 +22,21 @@
 				<span class="mx-1">&bull;</span>
 				<span>May 4, 2020</span>
 			</div> -->
+			<p>article = {{article}}</p>
+			<p>article.tags = {{article.tags}}</p>
 			<TagsBlock :tags="article.tags"/>
 			<h3 class="font-semibold text-gray-800 my-4 hover:underline text-lg dark:text-white">
 				{{article.title}}
 			</h3>
 
 			<!-- <div class="text-gray-700">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+				{{article.content}}
 			</div> -->
 
 			<div class="mt-4">
-				<router-link 	
-					:to="'/articles/' + article.id" 
-					class="py-2 text-indigo-600 text-xs uppercase hover:underline"
+				<router-link
+				:to="'/articles/' + article.id" 
+				class="py-2 text-indigo-600 text-xs uppercase hover:underline"
 				>
 					Read More <span>&rarr;</span>
 				</router-link>

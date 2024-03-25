@@ -14,7 +14,7 @@ export default {
         }
 	},
 	state: {
-        articles:[]
+        articles:[],
 	},
 	getters: {
         allArticles(state){
