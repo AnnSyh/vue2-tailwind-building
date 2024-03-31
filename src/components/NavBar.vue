@@ -37,11 +37,11 @@
 					>
 						<span>{{$t('achievements')}}</span>
 					</router-link>
-					<router-link to="/photo"
+					<!-- <router-link to="/photo"
 						class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
 					>
 						<span>{{$t('photos')}}</span>
-					</router-link>
+					</router-link> -->
 					</div>
 				</div>
 			</div>

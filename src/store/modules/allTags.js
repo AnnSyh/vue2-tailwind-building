@@ -15,7 +15,7 @@ export default {
 			{
 				"id": 3,
 				"name":'corporate law',
-				"color":'red'
+				"color":'purple'
 			},
 			{
 				"id": 4,

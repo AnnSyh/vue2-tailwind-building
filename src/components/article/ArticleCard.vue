@@ -22,9 +22,7 @@
 				<span class="mx-1">&bull;</span>
 				<span>May 4, 2020</span>
 			</div> -->
-			<p>article = {{article}}</p>
-			<p>article.tags = {{article.tags}}</p>
-			<TagsBlock :tags="article.tags"/>
+			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
 			<h3 class="font-semibold text-gray-800 my-4 hover:underline text-lg dark:text-white">
 				{{article.title}}
 			</h3>
@@ -35,8 +33,8 @@
 
 			<div class="mt-4">
 				<router-link
-				:to="'/articles/' + article.id" 
-				class="py-2 text-indigo-600 text-xs uppercase hover:underline"
+					:to="'/articles/' + article.id" 
+					class="py-2 text-indigo-600 text-xs uppercase hover:underline"
 				>
 					Read More <span>&rarr;</span>
 				</router-link>
@@ -56,6 +54,9 @@ export default {
 		article: {
 			type: Object,
 			required: true
+		},
+		isSelect:{
+			type: String
 		}
 	}
 }

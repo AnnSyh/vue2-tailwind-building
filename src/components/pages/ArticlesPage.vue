@@ -6,27 +6,26 @@
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
 					{{ $t('RecentArticles') }}:
 				</h2>
-			</div>
-			<!-- <p>this.$store.state.allArticles.allArticles = {{ this.$store.state.allArticles.allArticles }}</p><hr> -->
-			<!-- <TagsBlock/> -->
 
-			<div class="flex flex-wrap gap-2">
-				<div 	v-for="(tag, index) in this.$store.state.allTags.tags"
-						:key="index"
+			</div>
+
+			<div class="flex overflow-x-auto gap-2">
+				<div 	v-for="(tag, index) in this.$store.state.allTags.tags" :key="index"
 						class="text-center cursor-pointer"
 				>
 					<button
-						@click="filteredTag(tag.name)" 
-						:class="'text-' + tag.color + '-500 bg-' + tag.color + '-200 h-10 rounded px-2 py-1 text-xs select-none'"
-					>
+							@click="filteredArticle(tag.name)" 
+							:class="[{'border border-black': isSelect === tag.name }, 
+									'text-' + tag.color + '-500 bg-' + tag.color + '-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap']"
+						>
 						{{tag.name}} 
 					</button>
 				</div>
 					<button
 						@click="filteredSbros()" 
-						:class="'text--500 bg--200 h-10 rounded px-2 py-1 text-xs select-none'"
+						:class="'text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap'"
 					>
-						X
+					reset filters
 					</button>
 			</div>
 
@@ -34,10 +33,12 @@
 				placeholder="Поиск по названиям статей">
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-
-				<ArticleCard v-for="(article, index) in filteredArticles" :key="index" :article="article" />
-				<!-- <ArticleCard v-for="(article, index) in filteredArticlesTag" :key="index" :article="article" /> -->
-
+				<!-- v-html="highlightText(article.title)" -->
+				<ArticleCard v-for="(article, index) in filteredArticles" 
+					:key="index" 
+					:article="article" 
+					:isSelect="isSelect" 
+				/>
 			</div>
 		</div>
 
@@ -46,45 +47,46 @@
 
 <script>
 import ArticleCard from '@/components/article/ArticleCard.vue'
-// import TagsBlock from '@/components/TagsBlock.vue'
-// import  {mapGetters, mapActions} from 'vuex'
 
 export default {
 	components: {
 		ArticleCard,
-		// TagsBlock,
 	},
 
 	data() {
 		return {
 			searchInput: '',
-			tagFilter: null
+			filterTag: '',
+			isSelect: '',
 		}
 	},
 	computed: {
 		filteredArticles() {
-			// console.log('filteredArticles = ', this.$store.state.allArticles.allArticles);
-			return this.$store.state.allArticles.allArticles.filter(article => article.title.toLowerCase().includes(this.searchInput.toLowerCase()));
+			return this.$store.state.allArticles.allArticles.filter(article => {
+				const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
+				const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
+				return matchesTitle && matchesTag;
+				}	
+			);
 		},
-		// filteredArticlesTag() {
-		// 	if (!this.tagFilter) {
-		// 		return this.$store.state.allArticles.allArticles.filter(article => article.title.toLowerCase().includes(this.searchInput.toLowerCase()))
-		// 	}
-		// 	return this.$store.state.allArticles.allArticles.filter(article => article.tags.includes(this.tagFilter));
-		// }
+
 	},
 	methods: {
-		filteredTag(tag) {
-			this.tagFilter = tag;
-		}
-	}
+		filteredArticle(tag){
+			this.filterTag = tag;
+			this.isSelect = tag;
+		},
+		filteredSbros() {
+			this.filterTag = '';
+			this.isSelect = ''
 
-	// computed: mapGetters(['allArticles','postsCount']),
-	// methods: mapActions(['fetchArticles']),
-	// async mounted(){
-	// 	// this.$store.dispatch('fetchArticles')
-	// 	this.fetchArticles(4)
-	// }
+		},
+		highlightText(text) {
+			return text.replace(new RegExp(this.searchInput, 'gi'), match => 
+				`<span style="background-color: yellow;">${match}</span>`
+			);
+		}	
+	}
 }
 
 </script>
@@ -93,4 +95,5 @@ export default {
 .h-content {
 	height: calc(100vh - 130px);
 }
+
 </style>

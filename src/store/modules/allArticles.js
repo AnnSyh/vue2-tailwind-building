@@ -12,7 +12,7 @@ export default {
 			},
 			{
 				"id": 2,
-				"title": 'Do you smoke? - No work!',
+				"title": 'Do you smoke? - No work! Rules',
 				"tags": ["international law"],
 				"url": "https://via.placeholder.com/600/92c952",
 				"thumbnailUrl": "https://via.placeholder.com/150/92c952", 
