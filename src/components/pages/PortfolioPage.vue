@@ -61,7 +61,7 @@ export default {
 
 <style scoped>
 	.demo {
-		@apply  m-4 overflow-hidden;
+		@apply  m-4;
 	}
 
 	.tab-button {
@@ -72,7 +72,10 @@ export default {
 		@apply bg-green-400 dark:bg-yellow-400 text-white;
 	}
 	.tab {
-		@apply border border-gray-200 p-4;
+		@apply p-4 overflow-y-auto h-screen;
+		max-height: calc(100vh - 200px);
+		/* @apply flex-none min-w-full px-4 overflow-hidden lg:overflow-auto scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded ; */
+		/* @apply scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded  max-h-96 ; */
 	}
 	a {
 		@apply text-indigo-600;
