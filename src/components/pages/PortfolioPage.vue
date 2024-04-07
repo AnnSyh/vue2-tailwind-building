@@ -12,7 +12,9 @@
 					{{ $t(tab) }}
 				</button>
 			</div>
-			<component :is="tabs[currentTab]" class="tab"></component>
+			<perfect-scrollbar class="perfect-scrollbar tab">
+				<component :is="tabs[currentTab]" class=""></component>
+			</perfect-scrollbar>
 		</div>
 
 	</div>
@@ -80,4 +82,5 @@ export default {
 	a {
 		@apply text-indigo-600;
 	}
+
 </style>
