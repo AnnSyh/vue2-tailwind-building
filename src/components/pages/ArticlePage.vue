@@ -8,14 +8,18 @@
 			</h1>
 			<div class="mb-8 px-2 w-full flex justify-between">
 				<a href="/articles" class="text-indigo-600 text-sm hover:underline">
-					<span class="inline-block transform rotate-180">→</span> Все статьи 
+					<!-- <span class="inline-block transform rotate-180">→</span> Все статьи  -->
+					<span class="inline-block transform rotate-180">→</span> {{ $t('allArticles') }} 
 				</a>
-				<TagsBlock/>
+				
 			</div>
-			<div v-if="article.url">
-				<img  :src="article.url" :alt=article.title class="w-80 h-80 float-left mr-4 mb-4">
+			<div>
+				<div v-if="article.url" class="flex flex-col float-left">
+					<img  :src="article.url" :alt=article.title class="w-80 h-80 float-left mr-4 mb-4">
+					<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
+				</div>
+				<div v-html='article.content'></div>
 			</div>
-			<span v-html='article.content'></span>
 		</div>
 
 	</div>
@@ -29,6 +33,11 @@ import TagsBlock from '@/components/TagsBlock.vue'
 export default {
 	components: {
 		TagsBlock
+	},
+	props: {
+		isSelect:{
+			type: String
+		}
 	},
 	data() {
 		return {

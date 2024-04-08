@@ -12,13 +12,13 @@
                   class="rounded-t mt-8 group border border-gray-500 flex justify-between px-4 py-3 items-center text-gray-500 transition ease duration-500 cursor-pointer pr-10 relative"
                   :class="item.open ? '' : 'rounded-b'"
             >
-              <div class="transition ease duration-500">
+              <div class="transition ease duration-500 dark:text-white">
                 <b>{{ item.titleName }}</b> ({{ item.titleDate }}), {{ item.titlePosition }}
               </div>
-              <div class="h-8 w-8 border border-gray-700 rounded-full items-center inline-flex justify-center transform transition ease duration-500  click:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
+              <div class="h-8 w-8 border-2 border-green-400 dark:border-yellow-400 rounded-full items-center inline-flex justify-center transform transition ease duration-500  click:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
                     :class="{'-rotate-180': item.open}"
               >
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down text-green-400 dark:text-yellow-400"></i>
               </div>
             </div>
             <div v-if="item.open" class="rounded-b border-b border-l mb-8 border-r border-gray-500 px-4 overflow-hidden ease duration-500">

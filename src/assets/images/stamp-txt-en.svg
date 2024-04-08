@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+    <style>
+    text {
+        font-size: 60px;
+        font-family: Arial, serif;
+        font-variant: small-caps;
+        font-variant-ligatures: none;
+        stroke: #272ebd;
+        stroke-width: 1.5px;
+        fill: #272ebd;
+    }
+    </style>
+    <defs>
+        <path id="textcircle"
+            d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+            transform="rotate(100,250,250)"/>
+    </defs>
+    <rect width="100%" height="100%" fill="#e5e7eb" />
+    <text>
+        <textPath xlink:href="#textcircle"
+                aria-label="professionalism &amp; quality"
+                textLength="942">&#160;professionalism &amp; quality</textPath>
+    </text>
+</svg>

@@ -1,18 +1,24 @@
 <template>
 	<div class="rounded border md:shadow w-full overflow-hidden" >
 		<div v-if="article.url">
-			<a href="#">
-				<img class="w-full h-48 object-cover" 
-				:src="article.url" 
-				:alt="article.title" 
-			/></a>
+			<router-link
+				:to="'/articles/' + article.id" 
+			>
+				<img 	class="w-full h-48 object-cover" 
+						:src="article.url" 
+						:alt="article.title" 
+				/>
+			</router-link>
 		</div>
 		<div v-else>
-			<a href="#">
-				<img class="w-full h-48 object-cover" 
-				src="@/assets/images/default-img.png" 
-				:alt="article.title" 
-			></a>
+			<router-link
+				:to="'/articles/' + article.id" 
+			>
+			<img 	class="w-full h-48 object-cover" 
+					src="@/assets/images/default-img.png" 
+					:alt="article.title" 
+			>
+			</router-link>
 		</div>
 		<div class="px-4 py-4">
 			<!-- <div class="text-xs text-gray-600 font-medium">
@@ -23,9 +29,13 @@
 				<span>May 4, 2020</span>
 			</div> -->
 			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
-			<h3 class="font-semibold text-gray-800 my-4 hover:underline text-lg dark:text-white">
+			<h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
+				<!-- {{ highlightText(article.title) }} -->
 				{{article.title}}
 			</h3>
+			<!-- <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
+				{{article.title}}
+			</h3> -->
 
 			<!-- <div class="text-gray-700">
 				{{article.content}}
@@ -36,7 +46,7 @@
 					:to="'/articles/' + article.id" 
 					class="py-2 text-indigo-600 text-xs uppercase hover:underline"
 				>
-					Read More <span>&rarr;</span>
+				{{ $t('readMore') }} <span>&rarr;</span>
 				</router-link>
 			</div>
 		</div>
@@ -57,6 +67,16 @@ export default {
 		},
 		isSelect:{
 			type: String
+		},
+		searchInput:{
+			type: String
+		},
+	},
+	methods: {
+		highlightText(text) {
+			return text.replace(new RegExp(this.searchInput, 'gi'), match => 
+				`<span style="background-color: yellow;">${match}</span>`
+			);
 		}
 	}
 }

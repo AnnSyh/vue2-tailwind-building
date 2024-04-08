@@ -6,8 +6,8 @@
         <a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.suharevskiy@gmail.com">ivan.suharevskiy@gmail.com</a>
         <h2>{{$t('education')}}</h2>
         <p>
-            МОСКОВСКАЯ ГОСУДАРСТВЕННАЯ ЮРИДИЧЕСКАЯ АКАДЕМИЯ (МГЮА), ИНСТИТУТ ЧАСТНОГО ПРАВА,<br>
-            МОСКВА<br>
+            МОСКОВСКАЯ ГОСУДАРСТВЕННАЯ ЮРИДИЧЕСКАЯ АКАДЕМИЯ (МГЮА), <br>
+            ИНСТИТУТ ЧАСТНОГО ПРАВА,<br>
             Бакалавриат, 4 курс<br>
             2019 – 2023
         </p>

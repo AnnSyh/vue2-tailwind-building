@@ -4,6 +4,7 @@ export default {
         tags: [
 			{
 				"id": 1,
+				// SocialAndLaborLaw
 				"name":'social and labor law',
 				"color":'gray'
 			},

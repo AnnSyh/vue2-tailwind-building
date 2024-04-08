@@ -34,8 +34,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-span-12 sm:col-span-5">
-						<img class="max-h-56 m-auto" src="@/assets/images/legalScales1.png" alt="person">
+					<div class="col-span-12 sm:col-span-5 m-auto">
+						<!-- <img class="max-h-56 m-auto" src="@/assets/images/legalScales1.png" alt="person" fill="#e5e7eb"  > -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+							<image 
+								x="0" y="0" width="300" height="300" alt=""
+								:href="this.$i18n.locale === 'en' ? require('@/assets/images/stamp-txt-en.svg') : require('@/assets/images/stamp-txt.svg')"
+							/>
+							<image href="@/assets/images/stamp-img.svg" x="85" y="85" width="130" height="130" alt="" /> 
+						</svg>
+
 					</div>
 				</div>
 			</tilt>
@@ -49,7 +57,7 @@ import tilt from 'vanilla-tilt-vue'
 export default {
 	components: {
 		tilt
-	}
+	},
 }
 </script>
 
@@ -88,4 +96,18 @@ export default {
 	max-width: 800px;
 	height: calc(100% - 64px);
 }
+
+
+.svg-img {
+	position: absolute;
+	z-index: 10;
+	top: 89px;
+	left: 87px;
+}
+.svg-txt {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}	
+
 </style>

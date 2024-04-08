@@ -1,6 +1,9 @@
 <template>
 	<div class="max-w-lg m-auto my-4">
-        <div class="text-center text-2xl mb-4">Если вы не нашли ответ на свой вопрос, буду рад ответить на него</div>
+        <div class="text-center text-2xl mb-4">
+			<!-- Если вы не нашли ответ на свой вопрос, буду рад ответить на него -->
+			{{ $t('IfYouHaventFoundAnswer') }}:
+		</div>
         <ContactForm/>
 	</div>
 </template>
