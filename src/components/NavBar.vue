@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.nav-target {
+/* .nav-target {
   display: none;
-}
+} */
 </style>

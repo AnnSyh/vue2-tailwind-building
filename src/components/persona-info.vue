@@ -14,7 +14,7 @@
         <ul>
             <li>Средний балл (GPA): 87,2</li>
         </ul>
-        <div class="flex justify-between">
+        <div class="flex gap-3">
             <a class="text-indigo-600 text-xs uppercase hover:underline" href="http://mylaw.fun/wp-content/uploads/2022/09/RESUME.pdf" target="_blank">
                 <i class="fa fa-download text-green-400 dark:text-yellow-400 mr-2"></i>Скачать портфолио(english)
             </a>
