@@ -45,7 +45,7 @@ export default {
      },
      data() {
     return {
-      allSectionsOpen: false,
+      allSectionsOpen: true,
       items: [
         { 
           titleName: 'Адвокатское бюро г.Москвы «Инфралекс»',
