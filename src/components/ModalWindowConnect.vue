@@ -4,17 +4,19 @@
     >
       <div class="max-w-3xl mx-auto p-8 bg-white dark:bg-gray-700 dark:text-white relative">
         <button @click="$emit('close')" class="py-2 px-4 rounded-full absolute top-0 right-0 bg-green-400 text-white  dark:bg-yellow-400">x</button>
-        <ConnectWithMe/>
+        <div class="max-w-lg m-auto my-4">
+              <ContactForm/>
+        </div>
       </div>
     </div>
   </template>
   
   <script>
-  import ConnectWithMe from '@/components/ConnectWithMe.vue';
+  import ContactForm from '@/components/ContactForm.vue'
 
   export default {
     components: {
-     ConnectWithMe
+      ContactForm
     },
     props: {
       show: {
