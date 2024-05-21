@@ -50,8 +50,8 @@
           },
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
-            name: this.name,
-            email: this.email,
+            name: data.name,
+            email: data.email,
             // message: this.message,
           }),
         });  
