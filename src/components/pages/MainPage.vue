@@ -17,8 +17,8 @@
 							</div>
 							<div class="person-info-col">
 								<p class="text-light-gray lg:text-lg">{{$t('SuharevskiyIvan')}}</p>
-								<p class="text-light-gray lg:text-lg">+7 (988) 950 23 95</p>
-								<p class="text-light-gray lg:text-lg">ivan.suharevskiy@gmail.com</p>
+								<p class="text-light-gray lg:text-lg"><a class="text-indigo-600 text-xs uppercase hover:underline" href="tel:79889502395"> +7 (988) 950 23 95</a></p>
+								<p class="text-light-gray lg:text-lg"><a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.suharevskiy@gmail.com">ivan.suharevskiy@gmail.com</a></p>
 							</div>
 							<div class="col-span-2 text-center">
 								<p class="text-light-gray lg:text-lg">{{$t('Assistantlawyer')}}</p>

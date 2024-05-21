@@ -35,10 +35,31 @@
   </template>
   
   <script>
+   const WEB3FORMS_ACCESS_KEY = "1e7460b2-a237-40f4-a311-62750dda8784";
+
   export default {
     methods: {
       async submitHandler (data) {
         // await this.$axios.post('/my/api', data)
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            name: this.name,
+            email: this.email,
+            // message: this.message,
+          }),
+        });  
+        const result = await response.json();
+        if (result.success) {
+          console.log(result);
+        }      
+
         alert(`Спасибо, ${data.name}`)
       }
     }

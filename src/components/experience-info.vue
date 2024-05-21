@@ -27,6 +27,10 @@
                   {{ item }}
                 </li>
               </ul>
+              <a v-if="item.recommendation" :href="item.recommendation" target="_blank" class="text-indigo-600 text-xs uppercase hover:underline">
+                Рекомендательное письмо
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
           </div>
           <!-- /accordion-tab -->
@@ -57,8 +61,9 @@ export default {
             li2: 'Анализ и обобщение судебной практики по различным вопросам (например, по вопросам: «Могут ли вкладчики ПИФа выступать в суде отдельно от управляющей компании?»',
             li3: '«Анализ судебной практики с участием конкретного эксперта»',
             li4: 'Взаимодействие с судами, получение нужной документации',
-            li5: 'Техническая работа (ведение реестров, описей документов)'
+            li5: 'Техническая работа (ведение реестров, описей документов)',
           }, 
+          recommendation: 'https://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf',
           open: true 
         },
         { 
