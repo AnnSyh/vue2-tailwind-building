@@ -1,10 +1,14 @@
-<template>
-	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white">
+<template> <!-- 4 -кол-во карточек в строчку -->
+	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white"
+		:class="{'h-content' : (filteredArticles.length <= 4)}" 
+	>
 
 		<div class="mx-auto my-12 px-4">
 			<div class="md:flex justify-between items-center mb-8">
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-					{{ $t('RecentArticles') }}:
+					<!-- 111{{ $t('RecentArticles') }}:<br/>
+					222 {{this.$store.state.allArticles.allArticles}}<br/> -->
+					333 {{(filteredArticles).length}}
 				</h2>
 
 			</div>

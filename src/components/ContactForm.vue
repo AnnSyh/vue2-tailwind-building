@@ -37,7 +37,7 @@
           input-class="border border-gray-400 rounded px-3 py-2 leading-none focus:border-green-500 dark:focus:border-yellow-500  outline-none border-box w-full"
           type="textarea" 
           name="message" 
-          validation="required|max:50,length" 
+          validation="required|max:100,length" 
         />
         <FormulateInput
           type="submit"

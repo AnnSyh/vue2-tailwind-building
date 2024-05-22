@@ -1,5 +1,5 @@
 <template>
-	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white" >
+	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white h-screen" >
 		<!-- <p>{{$t('main-page') | to-uppercase}}</p>
 		<p>{{$t('hello')}}</p> -->
 		<div class="grid-wrapper">
@@ -87,9 +87,9 @@ export default {
 	@apply h-9 md:h-16 lg:h-24;
 }
 
-.container {
+/* .container {
 	height: calc(100% - 130px);
-}
+} */
 
 .grid-wrapper {
 	@apply flex m-auto justify-center items-center;

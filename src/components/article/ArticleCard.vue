@@ -14,7 +14,13 @@
 			<router-link
 				:to="'/articles/' + article.id" 
 			>
-			<img 	class="w-full h-48 object-cover" 
+			<img 	v-if="article.url"
+					class="w-full h-48 object-cover" 
+					:src="article.url" 
+					:alt="article.title" 
+			>
+			<img 	v-else
+					class="w-full h-48 object-cover" 
 					src="@/assets/images/default-img.png" 
 					:alt="article.title" 
 			>
@@ -28,18 +34,12 @@
 				<span class="mx-1">&bull;</span>
 				<span>May 4, 2020</span>
 			</div> -->
+			<!-- <p> {{article.url}} </p> -->
 			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
 			<h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
 				<!-- {{ highlightText(article.title) }} -->
-				{{article.title}}
+				{{ $t(article.title) }} 
 			</h3>
-			<!-- <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
-				{{article.title}}
-			</h3> -->
-
-			<!-- <div class="text-gray-700">
-				{{article.content}}
-			</div> -->
 
 			<div class="mt-4">
 				<router-link

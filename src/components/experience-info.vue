@@ -15,9 +15,10 @@
               <div class="transition ease duration-500 dark:text-white">
                 <b>{{ item.titleName }}</b> ({{ item.titleDate }}), {{ item.titlePosition }}
               </div>
-              <div class="h-8 w-8 border-2 border-green-400 dark:border-yellow-400 rounded-full items-center inline-flex justify-center transform transition ease duration-500  click:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
+              <div v-if="Object.keys(item.content).length"
+                    class="h-8 w-8 border-2 border-green-400 dark:border-yellow-400 rounded-full items-center inline-flex justify-center transform transition ease duration-500  click:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
                     :class="{'-rotate-180': item.open}"
-              >
+              >              
                 <i class="fas fa-chevron-down text-green-400 dark:text-yellow-400"></i>
               </div>
             </div>
@@ -52,9 +53,17 @@ export default {
       allSectionsOpen: false,
       items: [
         { 
+          titleName: '«Аснис и партнеры» - Адвокатская контора',
+          titleDate: '24.11.2022 – по настоящее время',  
+          titlePosition: 'должность: помощник адвоката', 
+
+          content: {}, 
+          open: false 
+        },
+        { 
           titleName: 'Адвокатское бюро г.Москвы «Инфралекс»',
           titleDate: '11.10.2022 – 24.11.2022',  
-          titlePosition: 'стажер в практике разрешения споров', 
+          titlePosition: 'должность: стажер в практике разрешения споров', 
 
           content: {
             li1: 'Подготовка различных процессуальных документов (ходатайства, жалобы, объяснения) от имени адвокатов',
@@ -69,7 +78,7 @@ export default {
         { 
           titleName: 'АО «Консультант-Плюс»',
           titleDate: '03.2022 – 04.2022',  
-          titlePosition: 'должность-стажер', 
+          titlePosition: 'должность: стажер', 
 
           content: {
             li1: 'Разработка LegalTech проекта (Инструмент, позволяющий автоматизировать процесс согласования договора внутри компании и с контрагентом) в составе команды из юристов и IT специалистов',
@@ -83,7 +92,7 @@ export default {
         { 
           titleName: 'Коллегия адвокатов «Курганов и партнеры»',
           titleDate: '09.2021 – 12.2021',  
-          titlePosition: 'должность-помощник адвоката', 
+          titlePosition: 'должность: помощник адвоката', 
 
           content: {
             li1: 'Написание и отправка в арбитражные суды различных процессуальных документов (ходатайства, претензии, иски) от имени адвоката',
@@ -96,8 +105,8 @@ export default {
         },
         { 
           titleName: 'Юридическая фирма «ЮСТ»',
-          titleDate: 'осенняя практика',  
-          titlePosition: 'должность-стажер', 
+          titleDate: 'осенняя практика - 2021',  
+          titlePosition: 'должность: стажер', 
 
           content: {
             li1: 'Написание правовых заключений по вопросам корпоративного права (например, «Анализ SPV фондов в Америке», «Структура договора SAFE», «Сравнительный анализ правовых механизмов венчурного инвестирования в США и РФ»',

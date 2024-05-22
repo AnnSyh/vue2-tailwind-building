@@ -4,7 +4,7 @@
 		<div class="my-12 px-4 ">
 			<!-- <p>$store.state.allArticles = {{ $store.state.allArticles }}</p> -->
 			<h1 class="text-2xl md:text-3xl mb-8 mt-16 font-serif max-w-3xl mx-auto dark:text-white">
-				{{article.title}}
+				{{ $t(article.title) }} 
 			</h1>
 			<div class="mb-8 px-2 w-full flex justify-between">
 				<a href="/articles" class="text-indigo-600 text-sm hover:underline">

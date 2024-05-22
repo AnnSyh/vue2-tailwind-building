@@ -5,9 +5,9 @@
         ИНСТИТУТ ЧАСТНОГО ПРАВА,<br>
         Бакалавриат, 4 курс
     </p>
-    <div class="relative">
+    <div class="relative max-w-400 max-h-400">
       <span class="title">Средний балл (GPA)</span>
-      <DoughnutChart :width="600" :height="600"/>
+      <DoughnutChart />
       <div id="name">
         <span class="persent">{{ counter.toFixed(1) }}%</span>
         <span class="title">Годы обучения</span>
@@ -69,9 +69,14 @@ export default {
   #name  {
     position: absolute;
     width: 200px;
-    height: 50px;
-    top: calc(42% - 25px);
+    top: calc(50% - 70px);
     left: calc(50% - 100px);
+}
+
+@media screen and (max-width:600px) {
+  #name {
+    top:auto;
+  }
 }
 
 .title, .persent,.year {
@@ -82,5 +87,8 @@ export default {
 .persent {
   font-size: 400%;
 }
+
+.max-w-400 {max-width:1200px;}
+.max-h-400 {max-height:1200px;}
 
 </style>

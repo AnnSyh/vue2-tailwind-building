@@ -47,9 +47,10 @@ Vue.filter('to-uppercase', function(value){
 
 	// Создание экземпляра VueI18n с настройками
 	const i18n = new VueI18n({
-	locale: 'en', // установка локализации по умолчанию
+	locale: 'ru', // установка локализации по умолчанию
 	messages // установка сообщений локализаций
 	})
+	// Vue.prototype.$t = i18n.t // добавляем $t для использования
 
 	Vue.config.productionTip = false
 
