@@ -49,7 +49,7 @@ export default {
      },
      data() {
     return {
-      allSectionsOpen: true,
+      allSectionsOpen: false,
       items: [
         { 
           titleName: 'Адвокатское бюро г.Москвы «Инфралекс»',
@@ -64,7 +64,7 @@ export default {
             li5: 'Техническая работа (ведение реестров, описей документов)',
           }, 
           recommendation: 'https://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf',
-          open: true 
+          open: false 
         },
         { 
           titleName: 'АО «Консультант-Плюс»',
@@ -78,7 +78,7 @@ export default {
             li4: 'Поиск актуальной информации и написание/редактирование юридических новостей',
             li5: 'Подготовка визуальной части проекта в программе «Figma».'
           }, 
-          open: true 
+          open: false 
         },
         { 
           titleName: 'Коллегия адвокатов «Курганов и партнеры»',
@@ -92,7 +92,7 @@ export default {
             li4: 'Исправление ранее написанных документов, подача их в суд, выставление счетов клиентам',
             li5: 'Подготовка правовых заключений по вопросам из других отраслей права (например, по вопросам: «Как стать сенатором?» или «Как открыть ООО?»).'
           }, 
-          open: true 
+          open: false 
         },
         { 
           titleName: 'Юридическая фирма «ЮСТ»',

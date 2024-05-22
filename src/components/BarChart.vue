@@ -44,6 +44,10 @@
           tooltips: { // работает 
             enabled: false
           },
+          animation: {
+            duration: 4000, // настройка скорости рисования
+            easing: 'linear'
+          },
           plugins: {
             labels: {
               render: 'label',

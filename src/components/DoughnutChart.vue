@@ -12,18 +12,13 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Консультант Плюс', 'Гарант', 'Кодекс', 'Мой арбитр', 'Microsoft Office', 'Figma'],
+        // labels: ['Консультант Плюс', 'Гарант', 'Кодекс', 'Мой арбитр', 'Microsoft Office', 'Figma'],
         datasets: [{
-          label: 'My First Dataset',
-          data: [60, 60, 60, 60, 60, 60],
+          data: [87.2, 12.8],
           backgroundColor: [
-            'red',
-            'blue',
-            'yellow',
-            'green',
-            'purple',
-            'orange'
-          ]
+            '#47cf73',
+            '#d1d5db',
+          ],
         }]
       }
     };
@@ -35,31 +30,25 @@ export default {
     renderChart() {
       const ctx = this.$refs.chart.getContext('2d');
       new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: this.chartData,
         options: {
           responsive: true,
-          legend: {
+          legend: { // отключение legend
             display: false,
           },
-          tooltips: { // работает 
+          tooltips: { // отключение tooltips
             enabled: false
           },
+          borderWidth: 1, // настройка ширины границы
           animation: {
             duration: 4000, // настройка скорости рисования
             easing: 'linear'
           },
           plugins: {
-            labels: [{
-              render: 'label',
-              arc: true,
-              position: 'outside',
-              
-              fontSize: 14,
-              fontStyle: 'bold',
-              fontColor: '#000',
-            },
-          ]
+            labels: {
+              render: 'label'
+            }
           }
         }
       });

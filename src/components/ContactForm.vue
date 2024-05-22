@@ -35,9 +35,9 @@
           :label=" $t('YourMessage') "
           label-class="text-green-400 dark:text-yellow-400"
           input-class="border border-gray-400 rounded px-3 py-2 leading-none focus:border-green-500 dark:focus:border-yellow-500  outline-none border-box w-full"
-          type="text" 
+          type="textarea" 
           name="message" 
-          validation="required" 
+          validation="required|max:50,length" 
         />
         <FormulateInput
           type="submit"
