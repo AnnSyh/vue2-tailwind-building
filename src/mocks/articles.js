@@ -1,3 +1,23 @@
+// import Vue from 'vue'
+import Vue from 'vue';
+import VueI18n from 'vue-i18n';
+import en from "../../../src/assets/locales/en.json";
+import ru from "../../../src/assets/locales/ru.json";
+
+Vue.use(VueI18n);
+
+	// Готовые переводы сообщений локализаций
+	const messages = {
+		en,
+		ru
+	}
+
+	// Создание экземпляра VueI18n с настройками
+	const i18n = new VueI18n({
+	locale: 'ru', // установка локализации по умолчанию
+	messages // установка сообщений локализаций
+	})
+
 export default [
     {
         "id": 1,
@@ -50,13 +70,13 @@ export default [
     },
     {
         "id": 3,
-        "title": "Правила альтернативной подсудности для работников",
+        "title": i18n.t('RulesOfAlternative'),
         "url": "https://via.placeholder.com/600/92c952",
         "text":"Содержание 3 статьи",
     },
     {
         "id": 4,
-        "title": "Изменения в порядке прохождения медицинского осмотра с 1 апреля 2021 года",
+        "title": i18n.t("ChangesInTheProcedure"),
         "url": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg",
         "text":"Содержание 4 статьи",
     },

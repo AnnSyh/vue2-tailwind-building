@@ -4,47 +4,46 @@ export default {
         allArticles:  [
 			{
 				"id": 1,
-				"title": 'Rules of alternative jurisdiction for workers',
+				"title": 'RulesOfAlternative',
 				"tags": ["social and labor law", "international law"],
 				"url": "https://via.placeholder.com/600/92c952",
 				"thumbnailUrl": "https://via.placeholder.com/150/92c952", 
-				"content": 'Контент статьи 1' 
+				"content": 'content 1' 
 			},
 			{
 				"id": 2,
-				// "title": this.$t('DoYouSmoke'),
-				"title": 'Do you smoke? - No work! Rules',
+				"title": 'DoYouSmoke',
 				"tags": ["international law"],
 				"url": "https://mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp",
 				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp", 
-				"content": 'Контент статьи 2' 
+				"content": 'content 2' 
 			},
 			{
 				"id": 3,
-				"title": 'Changes in the procedure for passing a medical examination from April 1, 2021',
+				"title": 'ChangesInTheProcedure',
 				"tags": ["corporate law"],
 				"url": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg",
 				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg", 
-				"content": 'Контент статьи 3' 
+				"content": 'content 3' 
 			},
 			{
 				"id": 4,
-				"title": 'What has changed in two years in the remuneration of teachers at the State Academy of Sciences?',
+				"title": 'WhatHasChangedInTwoYears',
 				"tags": ["history and law"],
 				"url": "https://mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png",
 				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png", 
-				"content": 'Контент статьи 3' 
+				"content": 'content 4' 
 			},
 			{
 				"id": 5,
-				"title": 'Which literary heroes can go to prison?',
+				"title": 'WhichLiteraryHeroes',
 				"tags": ["other", "history and law"],
 				"url": "https://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp",
 				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp", 
-				"content": 'Контент статьи 3' 
+				"content": 'content 5' 
 			},
 		],
-		selectedArticleId: null
+		selectedArticleId: null,
 	},
 	getters: {
 		getSelectedArticle: (state) => {

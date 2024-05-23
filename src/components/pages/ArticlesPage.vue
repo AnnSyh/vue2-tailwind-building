@@ -4,14 +4,14 @@
 	>
 
 		<div class="mx-auto my-12 px-4">
-			<div class="md:flex justify-between items-center mb-8">
+			<!-- <div class="md:flex justify-between items-center mb-8">
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-					<!-- 111{{ $t('RecentArticles') }}:<br/>
-					222 {{this.$store.state.allArticles.allArticles}}<br/> -->
+					{{ $t('articles') }}:
+					222 {{this.$store.state.allArticles.allArticles}}<br/>
 					333 {{(filteredArticles).length}}
 				</h2>
 
-			</div>
+			</div> -->
 
 			<div class="flex overflow-x-auto gap-2">
 				<div 	v-for="(tag, index) in this.$store.state.allTags.tags" :key="index"
@@ -67,12 +67,23 @@ export default {
 	},
 	computed: {
 		filteredArticles() {
-			return this.$store.state.allArticles.allArticles.filter(article => {
-				const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
-				const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
-				return matchesTitle && matchesTag;
-				}	
-			);
+			// if (this.$i18n.locale === 'en'){
+				// console.log('текущий язык = ', this.$i18n.locale)
+				return this.$store.state.allArticles.allArticles.filter(article => {
+					const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
+					const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
+					return matchesTitle && matchesTag;
+					}	
+				);
+			// } else {
+			// 	console.log('текущий язык русс = ', this.$i18n.locale)	
+			// 	return this.$store.state.allArticles.allArticlesRu.filter(article => {
+			// 		const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
+			// 		const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
+			// 		return matchesTitle && matchesTag;
+			// 		}
+			// 	)
+			// }
 		},
 
 	},

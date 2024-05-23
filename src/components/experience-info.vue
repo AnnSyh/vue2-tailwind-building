@@ -3,7 +3,7 @@
 
     <div class="container mx-auto">
           <button  @click="toggleAllSections" class="text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap flex ml-auto items-center -my-4 ">
-            {{ allSectionsOpen ? 'Close All Sections' : 'Open All Sections' }}
+            {{ allSectionsOpen ? $t('CloseAllSections') : $t('OpenAllSections') }}
           </button>
           <!-- accordion-tab  -->
           <!-- :loading="enableLazyload ? 'lazy' : 'eager'" -->
@@ -13,7 +13,7 @@
                   :class="item.open ? '' : 'rounded-b'"
             >
               <div class="transition ease duration-500 dark:text-white">
-                <b>{{ item.titleName }}</b> ({{ item.titleDate }}), {{ item.titlePosition }}
+                <b>{{ $t(item.titleName) }}</b> ({{ $t(item.titleDate) }}), {{ $t('JobTitle') }}: {{ $t(item.titlePosition) }}
               </div>
               <div v-if="Object.keys(item.content).length"
                     class="h-8 w-8 border-2 border-green-400 dark:border-yellow-400 rounded-full items-center inline-flex justify-center transform transition ease duration-500  click:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2"
@@ -25,11 +25,12 @@
             <div v-if="item.open" class="rounded-b border-b border-l mb-8 border-r border-gray-500 px-4 overflow-hidden ease duration-500">
               <ul class="work-experience">
                 <li v-for="(item, index) in item.content" :key="index">
-                  {{ item }}
+                  {{ $t(item) }}
                 </li>
               </ul>
               <a v-if="item.recommendation" :href="item.recommendation" target="_blank" class="text-indigo-600 text-xs uppercase hover:underline">
-                Рекомендательное письмо
+                <!-- Рекомендательное письмо -->
+                {{$t('LetterRecommendation')}}
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
@@ -53,65 +54,65 @@ export default {
       allSectionsOpen: false,
       items: [
         { 
-          titleName: '«Аснис и партнеры» - Адвокатская контора',
-          titleDate: '24.11.2022 – по настоящее время',  
-          titlePosition: 'должность: помощник адвоката', 
+          titleName: 'AsnisAndPartnersLawOffice',
+          titleDate: 'UntilNow',  
+          titlePosition: 'paralegal', 
 
           content: {}, 
           open: false 
         },
         { 
-          titleName: 'Адвокатское бюро г.Москвы «Инфралекс»',
+          titleName: 'Infralex',
           titleDate: '11.10.2022 – 24.11.2022',  
-          titlePosition: 'должность: стажер в практике разрешения споров', 
+          titlePosition: 'DisputeResolutionTrainee', 
 
           content: {
-            li1: 'Подготовка различных процессуальных документов (ходатайства, жалобы, объяснения) от имени адвокатов',
-            li2: 'Анализ и обобщение судебной практики по различным вопросам (например, по вопросам: «Могут ли вкладчики ПИФа выступать в суде отдельно от управляющей компании?»',
-            li3: '«Анализ судебной практики с участием конкретного эксперта»',
-            li4: 'Взаимодействие с судами, получение нужной документации',
-            li5: 'Техническая работа (ведение реестров, описей документов)',
+            li1: 'Infralex_li1',
+            li2: 'Infralex_li2',
+            li3: 'Infralex_li3',
+            li4: 'Infralex_li4',
+            li5: 'Infralex_li5',
           }, 
           recommendation: 'https://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf',
           open: false 
         },
         { 
-          titleName: 'АО «Консультант-Плюс»',
+          titleName: 'ConsultantPlus',
           titleDate: '03.2022 – 04.2022',  
-          titlePosition: 'должность: стажер', 
+          titlePosition: 'trainee', 
 
           content: {
-            li1: 'Разработка LegalTech проекта (Инструмент, позволяющий автоматизировать процесс согласования договора внутри компании и с контрагентом) в составе команды из юристов и IT специалистов',
-            li2: 'Написание правовых заключений по вопросу возникновения и защиты интеллектуальных прав на сайт',
-            li3: 'Подготовка различного рода отчетной документации',
-            li4: 'Поиск актуальной информации и написание/редактирование юридических новостей',
-            li5: 'Подготовка визуальной части проекта в программе «Figma».'
+            li1: 'ConsultantPlus_li1',
+            li2: 'ConsultantPlus_li2',
+            li3: 'ConsultantPlus_li3',
+            li4: 'ConsultantPlus_li4',
+            li5: 'ConsultantPlus_li5'
           }, 
           open: false 
         },
         { 
-          titleName: 'Коллегия адвокатов «Курганов и партнеры»',
+          titleName: 'KurganovAndPartners',
           titleDate: '09.2021 – 12.2021',  
-          titlePosition: 'должность: помощник адвоката', 
+          titlePosition: 'Assistantlawyer', 
 
           content: {
-            li1: 'Написание и отправка в арбитражные суды различных процессуальных документов (ходатайства, претензии, иски) от имени адвоката',
-            li2: 'Подготовка к судебным разбирательствам, проведение юридических исследований и составление документов',
-            li3: 'Анализ судебной практики по различным правовым спорам',
-            li4: 'Исправление ранее написанных документов, подача их в суд, выставление счетов клиентам',
-            li5: 'Подготовка правовых заключений по вопросам из других отраслей права (например, по вопросам: «Как стать сенатором?» или «Как открыть ООО?»).'
+            li1: 'KurganovAndPartners_li1',
+            li2: 'KurganovAndPartners_li2',
+            li3: 'KurganovAndPartners_li3',
+            li4: 'KurganovAndPartners_li4',
+            li5: 'KurganovAndPartners_li5'
           }, 
           open: false 
         },
         { 
-          titleName: 'Юридическая фирма «ЮСТ»',
-          titleDate: 'осенняя практика - 2021',  
-          titlePosition: 'должность: стажер', 
+          titleName: 'YUST',
+          titleDate: 'autumnPractice',  
+          titlePosition: 'trainee', 
 
           content: {
-            li1: 'Написание правовых заключений по вопросам корпоративного права (например, «Анализ SPV фондов в Америке», «Структура договора SAFE», «Сравнительный анализ правовых механизмов венчурного инвестирования в США и РФ»',
-            li2: 'Подготовка документов, таблиц, презентаций для внутренних нужд и для клиентов',
-            li3: 'Анализ судебной практики по вопросам корпоративного и интеллектуального права',
+            li1: 'YUST_li1',
+            li2: 'YUST_li2',
+            li3: 'YUST_li3',
           }, 
           open: false 
         },

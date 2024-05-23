@@ -50,8 +50,8 @@ Vue.filter('to-uppercase', function(value){
 	locale: 'ru', // установка локализации по умолчанию
 	messages // установка сообщений локализаций
 	})
+	
 	// Vue.prototype.$t = i18n.t // добавляем $t для использования
-
 	Vue.config.productionTip = false
 
 new Vue({

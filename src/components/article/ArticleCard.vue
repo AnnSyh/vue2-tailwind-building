@@ -38,7 +38,7 @@
 			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
 			<h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
 				<!-- {{ highlightText(article.title) }} -->
-				{{ $t(article.title) }} 
+			111	{{ $t(article.title) }} 
 			</h3>
 
 			<div class="mt-4">

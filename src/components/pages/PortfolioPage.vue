@@ -1,7 +1,7 @@
 <template>
 	<div class="container m-auto">
 
-		<div class="demo">
+		<div class="mx-auto my-12 px-4">
 			<div class="overflow-x-auto flex whitespace-nowrap">
 				<button
 					v-for="(_, tab) in tabs"
@@ -62,9 +62,6 @@ export default {
 </script>
 
 <style scoped>
-	.demo {
-		@apply  m-4;
-	}
 
 	.tab-button {
 		@apply px-4 py-2 items-center rounded-t-lg duration-300 ease-in-out bg-gray-300 text-gray-800 hover:text-white cursor-pointer hover:bg-green-400 dark:hover:bg-yellow-400;
