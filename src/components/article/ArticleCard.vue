@@ -35,10 +35,10 @@
 				<span>May 4, 2020</span>
 			</div> -->
 			<!-- <p> {{article.url}} </p> -->
+			<!-- <p>searchInput = {{searchInput}}</p> -->
 			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
 			<h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
-				<!-- {{ highlightText(article.title) }} -->
-			111	{{ $t(article.title) }} 
+				<div v-html="highlightText($t(article.title), searchInput)"></div>
 			</h3>
 
 			<div class="mt-4">

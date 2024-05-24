@@ -38,8 +38,8 @@
 				:placeholder="$t('searchByArticleTitles')">
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-				<!-- v-html="highlightText(article.title)" -->
 				<ArticleCard v-for="(article, index) in filteredArticles" 
+					:searchInput="searchInput"
 					:key="index" 
 					:article="article" 
 					:isSelect="isSelect" 
@@ -67,23 +67,14 @@ export default {
 	},
 	computed: {
 		filteredArticles() {
-			// if (this.$i18n.locale === 'en'){
-				// console.log('текущий язык = ', this.$i18n.locale)
-				return this.$store.state.allArticles.allArticles.filter(article => {
-					const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
-					const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
-					return matchesTitle && matchesTag;
-					}	
-				);
-			// } else {
-			// 	console.log('текущий язык русс = ', this.$i18n.locale)	
-			// 	return this.$store.state.allArticles.allArticlesRu.filter(article => {
-			// 		const matchesTitle = article.title.toLowerCase().includes(this.searchInput.toLowerCase())
-			// 		const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
-			// 		return matchesTitle && matchesTag;
-			// 		}
-			// 	)
-			// }
+			return this.$store.state.allArticles.allArticles.filter(article => {
+				// console.log('article.title = ', article.title) //ключ
+				// console.log('перевод = ', this.$t(article.title));//значение ключа на соот яз
+				const matchesTitle = this.$t(article.title).toLowerCase().includes(this.searchInput.toLowerCase())
+				const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
+				return matchesTitle && matchesTag;
+				}	
+			);
 		},
 
 	},
@@ -97,11 +88,6 @@ export default {
 			this.isSelect = ''
 
 		},
-		highlightText(text) {
-			return text.replace(new RegExp(this.searchInput, 'gi'), match => 
-				`<span style="background-color: yellow;">${match}</span>`
-			);
-		}	
 	}
 }
 
