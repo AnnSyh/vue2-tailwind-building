@@ -15,12 +15,27 @@ export default {
 	name: 'App',
 	data() {
 		return {
-		isDarkMode: false, // Используйте переменную для определения активной темы
+			isDarkMode: false, // Используйте переменную для определения активной темы
+			pageTitle: 'sukharevskiy.ru' // Задаем начальное значение заголовка
 		}
 	},
 	components: {
 		Navbar,
 		Footer,
+	},
+	created() {
+		this.updateDocumentTitle();
+	},
+	watch: {
+		'$route'() {
+		this.updateDocumentTitle();
+		}
+	},
+	methods: {
+		updateDocumentTitle() {
+		document.title = 'sukharevskiy.ru' + this.$route.path
+
+		}
 	}
 }
 </script>

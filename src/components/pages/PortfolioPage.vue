@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import PersonalInterests from '@/components/personal-interests.vue';
+// import ExtracurricularActivitiesAndAchievements from '@/components/extracurricular-activities-achievements.vue';
+// import PersonalInterests from '@/components/personal-interests.vue';
 import Personalnfo from '@/components/persona-info';
 import EducationInfo from '@/components/education-info';
 import Skills from '@/components/skills-info.vue';
-import ExtracurricularActivitiesAndAchievements from '@/components/extracurricular-activities-achievements.vue';
 import Experience from '@/components/experience-info.vue';
 import { ref } from 'vue';
 
@@ -33,9 +33,9 @@ export default {
 	components: {
 		Personalnfo,
 		Skills,
-		ExtracurricularActivitiesAndAchievements,
+		// ExtracurricularActivitiesAndAchievements,
+		// PersonalInterests,
 		Experience,
-		PersonalInterests,
 		EducationInfo,
 	},
 	data:()=>({
@@ -46,8 +46,8 @@ export default {
 			EducationInfo,
 			Experience,
 			Skills,
-			ExtracurricularActivitiesAndAchievements,
-			PersonalInterests,
+			// ExtracurricularActivitiesAndAchievements,
+			// PersonalInterests,
 		}
 			}),
 	methods: {

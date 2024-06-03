@@ -1,7 +1,7 @@
 <template> 
 	<div class="container mx-auto">
 
-		<div class="my-12 px-4 ">
+		<div class="mt-12 mb-20 px-4 ">
 			<!-- <p>$store.state.allArticles = {{ $store.state.allArticles }}</p> -->
 			<h1 class="text-2xl md:text-3xl mb-8 mt-16 font-serif max-w-3xl mx-auto dark:text-white">
 				{{ $t(article.title) }} 
@@ -15,10 +15,11 @@
 			</div>
 			<div>
 				<div v-if="article.url" class="flex flex-col float-left">
-					<img  :src="article.url" :alt=article.title class="w-80 h-80 float-left mr-4 mb-4">
+					<img  :src="article.url" :alt=article.title class="w-80 h-auto float-left mr-4 mb-4">
 					<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
 				</div>
-				<div v-html='article.content'></div>
+				<div v-if="this.$i18n.locale === 'ru'" v-html='article.content_ru'></div>
+				<div v-else v-html='article.content_en'></div>
 			</div>
 		</div>
 

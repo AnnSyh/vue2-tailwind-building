@@ -48,7 +48,9 @@ export default {
           },
           plugins: {
             labels: {
-              render: 'label'
+              render: 'label',
+              fontColor: document.getElementsByTagName('html')[0].classList.contains('dark') ? 'white' : 'black'
+
             }
           },
           cutoutPercentage: 90, // Устанавливает отверстие в центре диаграммы на 50% от радиуса, что делает кольцо более широким

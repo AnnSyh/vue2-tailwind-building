@@ -8,12 +8,12 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
       <div class="rounded border md:shadow w-full p-4 overflow-hidden">
-        <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">{{$t('Languages')}}:</h3>
-        <BarChart :width="300" :height="300"/>
+        <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">{{$t('Basic')}}:</h3>
+        <PieChart :width="300" :height="300"/>
       </div>
       <div class="rounded border md:shadow w-full p-4 overflow-hidden">
-        <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">{{$t('other')}}:</h3>
-        <PieChart :width="300" :height="300"/>
+        <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">{{$t('Languages')}}:</h3>
+        <BarChart :width="300" :height="300"/>
       </div>
       <!-- <div class="rounded border md:shadow w-full p-4 overflow-hidden">
         <h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">Компьютерные навыки:</h3>

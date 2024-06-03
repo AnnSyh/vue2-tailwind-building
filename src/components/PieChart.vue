@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Консультант Плюс', 'Гарант', 'Кодекс', 'Мой арбитр', 'Microsoft Office', 'Figma'],
+        labels: ['Консультант Плюс', 'Гарант', 'Figma', 'Microsoft Office', 'Мой арбитр', 'Кодекс'],
         datasets: [{
           label: 'My First Dataset',
           data: [60, 60, 60, 60, 60, 60],
@@ -39,6 +39,7 @@ export default {
         data: this.chartData,
         options: {
           responsive: true,
+          // maintainAspectRatio: false,
           legend: {
             display: false,
           },
@@ -52,18 +53,20 @@ export default {
           plugins: {
             labels: [{
               render: 'label',
-              arc: true,
+              // arc: true,
               position: 'outside',
               
               fontSize: 14,
               fontStyle: 'bold',
-              fontColor: '#000',
+              // fontColor: '#000',
+              fontColor: document.getElementsByTagName('html')[0].classList.contains('dark') ? 'white' : 'black'
             },
           ]
           }
         }
       });
     }
+
   }
 };
 

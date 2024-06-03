@@ -28,7 +28,15 @@
                   {{ $t(item) }}
                 </li>
               </ul>
-              <a v-if="item.recommendation" :href="item.recommendation" target="_blank" class="text-indigo-600 text-xs uppercase hover:underline">
+              <!-- <a v-if="item.recommendation" :href="item.recommendation" target="_blank" class="text-indigo-600 text-xs uppercase hover:underline">
+                Рекомендательное письмо
+                {{$t('LetterRecommendation')}}
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a> -->
+              <a  v-if="item.recommendation" 
+                  @click="showModalWindow(item.recommendation)" 
+                  class="text-indigo-600 text-xs uppercase hover:underline cursor-pointer"
+              >
                 <!-- Рекомендательное письмо -->
                 {{$t('LetterRecommendation')}}
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -38,85 +46,89 @@
           <!-- /accordion-tab -->
     </div>
 
+    <Modal :src="selectedImage" :show="showModal" @close="closeModal" />
+
   </div>
 </template>
 
 <script>
-
+import Modal from '@/components/ModalWindowSrc.vue';
 
 export default {
 	name: 'experience-info',
 	components: {
-
+      Modal
      },
      data() {
-    return {
-      allSectionsOpen: false,
-      items: [
-        { 
-          titleName: 'AsnisAndPartnersLawOffice',
-          titleDate: 'UntilNow',  
-          titlePosition: 'paralegal', 
+      return {
+        selectedImage:'',
+        showModal: false,
+        allSectionsOpen: false,
+        items: [
+          { 
+            titleName: 'AsnisAndPartnersLawOffice',
+            titleDate: 'UntilNow',  
+            titlePosition: 'paralegal', 
 
-          content: {}, 
-          open: false 
-        },
-        { 
-          titleName: 'Infralex',
-          titleDate: '11.10.2022 – 24.11.2022',  
-          titlePosition: 'DisputeResolutionTrainee', 
+            content: {}, 
+            open: false 
+          },
+          { 
+            titleName: 'Infralex',
+            titleDate: '11.10.2022 – 24.11.2022',  
+            titlePosition: 'DisputeResolutionTrainee', 
 
-          content: {
-            li1: 'Infralex_li1',
-            li2: 'Infralex_li2',
-            li3: 'Infralex_li3',
-            li4: 'Infralex_li4',
-            li5: 'Infralex_li5',
-          }, 
-          recommendation: 'https://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.pdf',
-          open: false 
-        },
-        { 
-          titleName: 'ConsultantPlus',
-          titleDate: '03.2022 – 04.2022',  
-          titlePosition: 'trainee', 
+            content: {
+              li1: 'Infralex_li1',
+              li2: 'Infralex_li2',
+              li3: 'Infralex_li3',
+              li4: 'Infralex_li4',
+              li5: 'Infralex_li5',
+            }, 
+            recommendation: 'http://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.jpg',
+            open: false 
+          },
+          { 
+            titleName: 'ConsultantPlus',
+            titleDate: '03.2022 – 04.2022',  
+            titlePosition: 'trainee', 
 
-          content: {
-            li1: 'ConsultantPlus_li1',
-            li2: 'ConsultantPlus_li2',
-            li3: 'ConsultantPlus_li3',
-            li4: 'ConsultantPlus_li4',
-            li5: 'ConsultantPlus_li5'
-          }, 
-          open: false 
-        },
-        { 
-          titleName: 'KurganovAndPartners',
-          titleDate: '09.2021 – 12.2021',  
-          titlePosition: 'Assistantlawyer', 
+            content: {
+              li1: 'ConsultantPlus_li1',
+              li2: 'ConsultantPlus_li2',
+              li3: 'ConsultantPlus_li3',
+              li4: 'ConsultantPlus_li4',
+              li5: 'ConsultantPlus_li5'
+            }, 
+            open: false 
+          },
+          { 
+            titleName: 'KurganovAndPartners',
+            titleDate: '09.2021 – 12.2021',  
+            titlePosition: 'Assistantlawyer', 
 
-          content: {
-            li1: 'KurganovAndPartners_li1',
-            li2: 'KurganovAndPartners_li2',
-            li3: 'KurganovAndPartners_li3',
-            li4: 'KurganovAndPartners_li4',
-            li5: 'KurganovAndPartners_li5'
-          }, 
-          open: false 
-        },
-        { 
-          titleName: 'YUST',
-          titleDate: 'autumnPractice',  
-          titlePosition: 'trainee', 
+            content: {
+              li1: 'KurganovAndPartners_li1',
+              li2: 'KurganovAndPartners_li2',
+              li3: 'KurganovAndPartners_li3',
+              li4: 'KurganovAndPartners_li4',
+              li5: 'KurganovAndPartners_li5'
+            }, 
+            open: false 
+          },
+          { 
+            titleName: 'YUST',
+            titleDate: 'autumnPractice',  
+            titlePosition: 'trainee', 
 
-          content: {
-            li1: 'YUST_li1',
-            li2: 'YUST_li2',
-            li3: 'YUST_li3',
-          }, 
-          open: false 
-        },
-      ]
+            content: {
+              li1: 'YUST_li1',
+              li2: 'YUST_li2',
+              li3: 'YUST_li3',
+            }, 
+            open: false 
+          },
+        ]
     };
   },
 	methods: {
@@ -126,7 +138,15 @@ export default {
       toggleAllSections() {
         this.allSectionsOpen = !this.allSectionsOpen;
         this.items.forEach(item => item.open = this.allSectionsOpen);
-      }
+      },
+      showModalWindow(src) {
+        // console.log('this.selectedImage = ',src);
+        this.selectedImage = src;
+        this.showModal = true;
+      },
+      closeModal() {
+        this.showModal = false;
+      }    
     }
 }
 	

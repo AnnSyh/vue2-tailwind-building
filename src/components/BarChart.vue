@@ -5,7 +5,8 @@
 </template>
   
   <script>
-  import { Chart } from 'chart.js'
+  // import { red } from '@tailwindcss/postcss7-compat/colors';
+import { Chart } from 'chart.js'
   import 'chartjs-plugin-labels';
 
   
@@ -18,6 +19,7 @@
             {
               // label: 'My First dataset',
               data: [50445, 30000, 15900],
+              fontColor: document.getElementsByTagName('html')[0].classList.contains('dark') ? '#fff' : '#000',
               backgroundColor: [
                 '#FF6384',
                 '#36A2EB',
@@ -51,11 +53,18 @@
           plugins: {
             labels: {
               render: 'label',
+              fontColor: document.getElementsByTagName('html')[0].classList.contains('dark') ? 'white' : 'black'
             },
           },
           scales: {
+            x: {
+              gridLines: {
+                    color: 'rgba(255, 255, 255, 1)'
+                }
+            },
             yAxes: [{
               ticks: { //  работает
+                fontColor: document.getElementsByTagName('html')[0].classList.contains('dark') ? 'white' : 'black',
                 beginAtZero: true,
                 callback: function(value) {
                if (value === 60000) {

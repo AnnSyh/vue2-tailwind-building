@@ -6,10 +6,11 @@
 			<div ref="swiper" class="swiper">
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div v-for="(image, index) in images" :key="index" class="swiper-slide">
+					<div v-for="(item, index) in images" :key="index" class="swiper-slide">
 						<img 
 							class="swiper-slide-img" 
-							:src="image.src" alt="Slide"
+							:src="item.src" 
+							alt="Slide"
 							@click="showModalWindow(index)" 
 						>
 					</div>
@@ -41,10 +42,7 @@ export default {
 			showModal: false,
 			currentImageIndex: 0,
 			images:  [
-				{
-					src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion-1.jpeg',
-					title: "accusamus beatae ad facilis cum similique qui sunt"
-				},
+				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion-1.jpeg',},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion.jpeg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/0001-1-scaled.jpg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/%D0%9F%D1%80%D0%B0%D0%B2%D0%BE%D0%B2%D0%BE%D0%B9%D0%94%D0%B8%D0%BA%D1%82%D0%B0%D0%BD%D1%82-1-scaled.jpg'},
@@ -91,6 +89,7 @@ export default {
 		},
 		showModalWindow(index) {
 			this.selectedImage = this.images[index];
+			console.log('this.selectedImage = ',this.selectedImage);
 			// this.selectedImage = this.photos[index];
 			this.showModal = true;
 		},
