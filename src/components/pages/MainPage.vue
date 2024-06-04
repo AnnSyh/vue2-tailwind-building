@@ -16,9 +16,9 @@
 								<img class="h-40 rounded-full" src="@/assets/images/IvanSukharevskiy.jpg" alt="person" >
 							</div>
 							<div class="person-info-col">
-								<p class="text-light-gray lg:text-lg">{{$t('SuharevskiyIvan')}}</p>
+								<p class="text-light-gray lg:text-lg">{{$t('SukharevskiyIvan')}}</p>
 								<p class="text-light-gray lg:text-lg"><a class="text-indigo-600 text-xs uppercase hover:underline" href="tel:79889502395"> +7 (988) 950 23 95</a></p>
-								<p class="text-light-gray lg:text-lg"><a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.suharevskiy@gmail.com">ivan.suharevskiy@gmail.com</a></p>
+								<p class="text-light-gray lg:text-lg"><a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.Sukharevskiy@gmail.com">ivan.Sukharevskiy@gmail.com</a></p>
 							</div>
 							<div class="col-span-2 text-center">
 								<p class="text-light-gray lg:text-lg">{{$t('Assistantlawyer')}}</p>

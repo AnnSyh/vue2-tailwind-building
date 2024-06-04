@@ -57,7 +57,7 @@ export default {
 				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/Sukharevskomu_Ivanu_Ivanovichu_page-0001.jpg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/certificate-1.jpg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/Geneve-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/12/Suharevskiy-scaled.jpg'},
+				{src: 'https://mylaw.fun/wp-content/uploads/2021/12/Sukharevskiy-scaled.jpg'},
 			]
 		}
 	},

@@ -3,9 +3,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img src="@/assets/images/IMG_ivan.jpg" alt="Сухаревский Иван Иванович" class="mb-4 w-full">
             <div>
-                <div><strong>{{$t('SuharevskiyIvan')}}</strong></div>
+                <div><strong>{{$t('SukharevskiyIvan')}}</strong></div>
                 <a class="text-indigo-600 text-xs uppercase hover:underline" href="tel:79889502395"> +7 (988) 950 23 95</a><br>
-                <a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.suharevskiy@gmail.com">ivan.suharevskiy@gmail.com</a>
+                <a class="text-indigo-600 text-xs uppercase hover:underline" href="mailto:ivan.Sukharevskiy@gmail.com">ivan.Sukharevskiy@gmail.com</a>
                 <div><strong>{{$t('education')}}</strong></div>
                 <p>
                     ({{$t('MSLA')}})<br>
