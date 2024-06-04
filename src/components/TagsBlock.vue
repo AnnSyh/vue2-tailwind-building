@@ -8,7 +8,7 @@
 			>
 				<div v-if="tag === tagState.name"
 					:class="[{'border border-black': isSelect === tagState.name }, 
-						'text-' + tagState.color + '-500 bg-' +  tagState.color + '-200 h-10 rounded px-2 py-1 text-xs flex items-center mr-2'
+						'text-' + tagState.color + '-500 bg-' +  tagState.color + '-200 h-10 rounded px-2 py-1 text-xs flex items-center mr-2 mb-2'
 						]"
 				>
 					{{ $t(tag) }} 

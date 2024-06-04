@@ -1,31 +1,28 @@
 <template>
 	<div class="rounded border md:shadow w-full overflow-hidden" >
-		<div v-if="article.url">
+		<div>
+			
 			<router-link
 				:to="'/articles/' + article.id" 
 			>
-				<img 	class="w-full h-48 object-cover" 
+				<img 	v-if="article.url"
+						class="w-full h-48 object-cover" 
 						:src="article.url" 
 						:alt="article.title" 
 				/>
+				<div v-else class="flex w-full h-48 object-cover" >
+					<img 	 
+							class="m-auto" 
+							width="150"
+							height="150"
+							src="@/assets/images/stamp-img.svg" 
+							alt=""
+					/> 
+				</div>
+
 			</router-link>
 		</div>
-		<div v-else>
-			<router-link
-				:to="'/articles/' + article.id" 
-			>
-			<img 	v-if="article.url"
-					class="w-full h-48 object-cover" 
-					:src="article.url" 
-					:alt="article.title" 
-			>
-			<img 	v-else
-					class="w-full h-48 object-cover" 
-					src="@/assets/images/default-img.png" 
-					:alt="article.title" 
-			>
-			</router-link>
-		</div>
+
 		<div class="px-4 py-4">
 			<!-- <div class="text-xs text-gray-600 font-medium">
 				<a href="#" class="uppercase hover:underline">
