@@ -42,6 +42,7 @@ export default {
 			showModal: false,
 			currentImageIndex: 0,
 			images:  [
+				{src: 'http://mylaw.fun/wp-content/uploads/2025/10/photo_2025-10-31_09-48-45-1.jpg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion-1.jpeg',},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion.jpeg'},
 				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/0001-1-scaled.jpg'},

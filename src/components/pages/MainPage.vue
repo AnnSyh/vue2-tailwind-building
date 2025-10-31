@@ -3,11 +3,12 @@
 		<!-- <p>{{$t('main-page') | to-uppercase}}</p>
 		<p>{{$t('hello')}}</p> -->
 		<div class="grid-wrapper">
+            <!-- class="tilt-card has-animation has-animation-blink" -->
 			<tilt 
 				data-tilt data-tilt-reverse="true" 
 				data-tilt-perspective="500"  
 				data-tilt-max="10" 
-				class="tilt-card"
+				class="tilt-card animation"
 			>
 				<div class="grid grid-cols-12 gap-3 w-full h-full px-5 py-6">
 					<div class="col-span-12 sm:col-span-7 flex justify-center">
@@ -62,6 +63,51 @@ export default {
 </script>
 
 <style scoped>
+/* ----------------------------- */
+.animation {
+   transition: all 0.2s ease-in; 
+   position: relative; /* Добавляем для псевдоэлемента */
+   overflow: hidden; /* Обрезаем всё что выходит за границы */
+}
+.animation:hover {
+  transition: all 0.2s ease-out;
+}
+
+.animation:hover:before {
+  animation: shine 0.5s 0s linear;
+}
+
+.animation::before {
+  content: '';
+  display: block;
+  width: 50px; /* Фиксированная ширина блика */
+  height: 150%; /* Увеличиваем высоту чтобы покрыть наклон */
+  position: absolute;
+  top: -25%; /* Смещаем вверх чтобы покрыть наклон */
+  left: 0%;
+  
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 30px 10px white; /* Увеличиваем размытие */
+  transform: skewX(-20deg);
+  z-index: 10; /* Повышаем z-index чтобы был поверх всего */
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    left: -50px; /* Начинаем за пределами карточки */
+  }
+  50% {
+    opacity: 0.8; /* Увеличиваем непрозрачность */
+  }
+  100% {
+    opacity: 0;
+    left: calc(100% + 50px); /* Заканчиваем за пределами карточки */
+  }
+}
+
+/* ----------------------------- */
 
 .person-info  {
 	@apply  grid gap-4;

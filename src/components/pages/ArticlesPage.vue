@@ -13,7 +13,8 @@
 
 			</div> -->
 
-			<div class="flex overflow-x-auto gap-2">
+			<div class="flex items-center overflow-x-auto gap-2">
+                <i class="fa-solid fa-filter text-green-400 dark:text-yellow-400 text-4xl"></i>
 				<div 	v-for="(tag, index) in this.$store.state.allTags.tags" :key="index"
 						class="text-center cursor-pointer"
 				>
@@ -25,16 +26,17 @@
 					{{ $t(tag.name) }} 
 					</button>
 				</div>
-					<button
-						@click="filteredSbros()" 
-						:class="'text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap'"
-					>
-					<!-- reset filters -->
-					{{$t('ResetFilters')}}
-					</button>
+                <button
+                    @click="filteredSbros()" 
+                    :class="'text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap'"
+                >
+                <!-- reset filters -->
+                 <i class="fa-solid fa-x"></i>
+                {{$t('ResetFilters')}}
+                </button>
 			</div>
 
-			<input type="text" v-model="searchInput" class="border border-gray-300 w-full my-4 px-4 py-4 rounded"
+			<input type="text" v-model="searchInput" class="border border-gray-300 w-full my-4 px-4 py-4 rounded placeholder-black text-black"
 				:placeholder="$t('searchByArticleTitles')">
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
