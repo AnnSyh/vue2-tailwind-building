@@ -30,6 +30,7 @@ import Modal from '@/components/ModalWindowAchievements.vue';
 import Swiper, {Pagination, Mousewheel } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import config from '@/config'
 
 export default {
 	components: {
@@ -41,24 +42,24 @@ export default {
 			selectedImage: {},
 			showModal: false,
 			currentImageIndex: 0,
+            config: config,
 			images:  [
-				{src: 'http://mylaw.fun/wp-content/uploads/2025/10/photo_2025-10-31_09-48-45-1.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion-1.jpeg',},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/aktion.jpeg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/0001-1-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/%D0%9F%D1%80%D0%B0%D0%B2%D0%BE%D0%B2%D0%BE%D0%B9%D0%94%D0%B8%D0%BA%D1%82%D0%B0%D0%BD%D1%82-1-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/03/0001-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/05/TIN.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2022/05/SertifikatK.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/11/PenPaper-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/10/0001-scaled.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/%D0%B3%D0%B0%D1%80%D0%B0%D0%BD%D1%82.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/%D0%9A%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D0%BD%D1%82.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/Sukharevskiy1024_1.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/Sukharevskomu_Ivanu_Ivanovichu_page-0001.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/certificate-1.jpg'},
-				{src: 'https://mylaw.fun/wp-content/uploads/2021/08/Geneve-scaled.jpg'},
-				// {src: 'https://mylaw.fun/wp-content/uploads/2021/12/Sukharevskiy-scaled.jpg'},
+				{src: config.getUploadUrl('/2025/10/photo_2025-10-31_09-48-45-1.jpg')},
+				{src: config.getUploadUrl('/2022/03/aktion-1.jpeg')},
+				{src: config.getUploadUrl('/2022/03/aktion.jpeg')},
+				{src: config.getUploadUrl('/2022/03/0001-1-scaled.jpg')},
+				{src: config.getUploadUrl('/2022/03/ПравовойДиктант-1-scaled.jpg')},
+				{src: config.getUploadUrl('/2022/03/0001-scaled.jpg')},
+				{src: config.getUploadUrl('/2022/05/TIN.jpg')},
+				{src: config.getUploadUrl('/2022/05/SertifikatK.jpg')},
+				{src: config.getUploadUrl('/2021/11/PenPaper-scaled.jpg')},
+				{src: config.getUploadUrl('/2021/10/0001-scaled.jpg')},
+				{src: config.getUploadUrl('/2021/08/гарант.jpg')},
+				{src: config.getUploadUrl('/2021/08/Консультант.jpg')},
+				{src: config.getUploadUrl('/2021/08/Sukharevskiy1024_1.jpg')},
+				{src: config.getUploadUrl('/2021/08/Sukharevskomu_Ivanu_Ivanovichu_page-0001.jpg')},
+				{src: config.getUploadUrl('/2021/08/certificate-1.jpg')},
+				{src: config.getUploadUrl('/2021/08/Geneve-scaled.jpg')},
 			]
 		}
 	},

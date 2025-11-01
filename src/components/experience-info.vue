@@ -53,6 +53,7 @@
 
 <script>
 import Modal from '@/components/ModalWindowSrc.vue';
+import config from '@/config'
 
 export default {
 	name: 'experience-info',
@@ -64,6 +65,7 @@ export default {
         selectedImage:'',
         showModal: false,
         allSectionsOpen: false,
+        config: config,
         items: [
           { 
             titleName: 'AsnisAndPartnersLawOffice',
@@ -85,7 +87,7 @@ export default {
               li4: 'Infralex_li4',
               li5: 'Infralex_li5',
             }, 
-            recommendation: 'http://mylaw.fun/wp-content/uploads/2023/01/letterRecommendationInfralecs.jpg',
+             recommendation: config.getUploadUrl('2023/01/letterRecommendationInfralecs.jpg'),
             open: false 
           },
           { 

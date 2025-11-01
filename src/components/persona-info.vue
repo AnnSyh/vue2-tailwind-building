@@ -27,10 +27,10 @@
                     {{ $t('PersonalInterests_2') }}
                 </p>
                 <div class="flex flex-col gap-3 mt-3">
-                    <a class="text-indigo-600 text-xs uppercase hover:underline" href="http://mylaw.fun/wp-content/uploads/2022/09/RESUME.pdf" target="_blank">
+                    <a class="text-indigo-600 text-xs uppercase hover:underline" :href="config.getUploadUrl('2022/09/RESUME.pdf')" target="_blank">
                         <i class="fa fa-download text-green-400 dark:text-yellow-400 mr-2"></i>Скачать портфолио(english)
                     </a>
-                    <a class="text-indigo-600 text-xs uppercase hover:underline" href="http://mylaw.fun/wp-content/uploads/2023/01/RESUMERus150123.pdf" target="_blank" >
+                    <a class="text-indigo-600 text-xs uppercase hover:underline" :href="config.getUploadUrl('2023/01/RESUMERus150123.pdf')" target="_blank" >
                         <i class="fa fa-download text-green-400 dark:text-yellow-400 mr-2"></i>Скачать портфолио(рус)
                     </a>
                 </div>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-
+import config from '@/config'
 
 export default {
 	name: 'persona-info',
@@ -49,7 +49,7 @@ export default {
      },
     data() {
       return {
-        
+        config: config,
       }
     },
 	methods: {

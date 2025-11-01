@@ -1,3 +1,5 @@
+import config from '@/config'
+
 export default {
 
 	state: {
@@ -55,11 +57,11 @@ export default {
 				"id": 2,
 				"title": 'DoYouSmoke',
 				"tags": ["international law"],
-				"url": "https://mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg",
-				// "url": "https://mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp",
-				// "thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp", 
-				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg", 
-				// <p><img decoding="async" src="https://mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg" alt="null" style="width: 240px;margin: auto;display: block;"></p>
+				"url": "//mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg",
+				// "url": "//mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp",
+				// "thumbnailUrl": "//mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp", 
+				"thumbnailUrl": "//mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg", 
+				// <p><img decoding="async" src="//mylaw.fun/wp-content/uploads/2021/09/scale_2400.jpg" alt="null" style="width: 240px;margin: auto;display: block;"></p>
 				"content_ru": `
 					<p>Реальная вакансия на hh.ru</p>
 					<p><span>Недавно листал вакансии для стажировки в юридической компании и наткнулся вот на такое объявление, где, по сути, </span><span><i>работодатель прямым текстом пишет, что может не принять человека на работу лишь потому, что он курит сигареты</i></span><span>. И я задумался: </span><span><b>«А на сколько законна такая формулировка, и не ущемляет ли она права курильщиков?»</b></span><span>.</span></p>
@@ -84,8 +86,8 @@ export default {
 				"id": 3,
 				"title": 'ChangesInTheProcedure',
 				"tags": ["corporate law"],
-				"url": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg",
-				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg", 
+				"url": "//mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg",
+				"thumbnailUrl": "//mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg", 
 				"content_ru": `
 					<p>С 1 апреля 2021 года вступил в силу новый приказ Минздравсоцразвития России от 28 января 2021 года №29н, который утвердил новый порядок проведения предварительных и периодических медицинских осмотров работников. Пришел он на смену Приказу Минздрава от 12 апреля 2011 года №302н. Данный приказ распространяет свое действие в том числе и на преподавателей.
 					</p>
@@ -177,8 +179,8 @@ export default {
 				"id": 4,
 				"title": 'WhatHasChangedInTwoYears',
 				"tags": ["history and law"],
-				"url": "https://mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png",
-				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png", 
+				"url": "//mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png",
+				"thumbnailUrl": "//mylaw.fun/wp-content/uploads/2021/08/ege-oplata.png", 
 				"content_ru": `
 					<p><b>Во-первых, практически во всех регионах стала предусматриваться оплата труда учителей не только на ЕГЭ, но и на ОГЭ и ГВЭ.</b> К тому же, в 4 регионах (Калининградская область, Нижегородская область, Ямало-Ненецкий автономный округ и Приморский край) предусмотрены выплаты и за проведение пробной тренировочной аттестации обучающихся. Эти выплаты являются нововведением последних лет, и профсоюз не может не отметить такой прогресс. Единственный субъект РФ, в котором компенсации предусмотрены лишь за проведение ЕГЭ – это республика Дагестан. К тому же Дагестан является единственным регионом, где не предусмотрена оплата труда технических специалистов. Во всех остальных регионах Российской Федерации предусмотрены выплаты всем работников пунктов прием экзамена.
 					</p>
@@ -248,23 +250,23 @@ export default {
 				"id": 5,
 				"title": 'WhichLiteraryHeroes',
 				"tags": ["other", "history and law"],
-				"url": "https://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp",
-				"thumbnailUrl": "https://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp", 
+				"url": "//mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp",
+				"thumbnailUrl": "//mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp", 
 				"content_ru": `
 					<p><span>Недавно задумался: «А что бы было, если б российское законодательство действовало бы не только в реальном мире, но и в мире всем полюбившихся книг отечественных авторов?». </span><span><b>Сколько бы уже давно известных и любимых нами персонажей пришлось бы отправить в места не столь отдаленные?</b></span><span> И немного покопавшись в классической литературе и советских мультиках, я готов представить вам свою пятерку персонажей, нарушивших российское законодательство.</span><br>
 					<div class="clear-both"></div>
-					<img class="w-80 h-auto float-left mt-4 mr-4 mb-4" decoding="async" class="aligncenter" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_1200.webp" alt="Война и мир"><br>
+					<img class="w-80 h-auto float-left mt-4 mr-4 mb-4" decoding="async" class="aligncenter" src="//mylaw.fun/wp-content/uploads/2021/08/scale_1200.webp" alt="Война и мир"><br>
 					<span>Давайте окунемся в мир великой повести Льва Николаевича Толстого «Война и мир» и вспомним тот самый эпизод, когда Николай Ростов и Долохов решили сыграть в карты, и Николай в итоге проиграл довольно крупную сумму. В этом эпизоде стоит отметить, что играли они не в каком-то казино, а, как говорится в самой повести, в английской гостинице. Иными словами, современные юристы квалифицировали бы такие действия, как </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/b20820739fab5a2c2645f2c2dba2d73e9025f6e4/">статья 171.2 УК РФ</a><span>, а именно: «Незаконные организация и проведение азартных игр», и </span><span><b>Долохов, как организатор данного мероприятия, уехал бы в тюрьму на целых 2 года или вынужден был бы платить штраф до 500 тысяч современных рублей!</b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp" alt=" Винни Пух и пяточек"></p>
+					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp" alt=" Винни Пух и пяточек"></p>
 					<p><span class="ml-4">Следующим давайте рассмотрим уже полюбившийся нам всем советский рассказ Бориса Заходера про Винни Пуха. «Пятачок, у тебя есть дома ружье?» — казалось бы, обычная смешная фраза, вошедшая в народ, но сколько же в ней противоправности… Во-первых, из этой фразы становится понятно, что непосредственно Пятачок у себя дома хранил ружье, что уже можно квалифицировать, как </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/fb522826ace216c139340de9ed06214ba989c656/">статья 222 УК РФ</a><span> «Незаконные приобретение, передача, сбыт, хранение, перевозка или ношение оружия, его основных частей, боеприпасов», и </span><span><b>наказание за это составляет лишение свободы на срок до 4 лет вместе со штрафом до 80 тысяч рублей.</b></span><span> Во-вторых, это ружье они хотели использовать, чтобы добыть мед у пчел, а это можно уже рассмотреть, как </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/0b1063e4835ba9d69ebc8556c87031cd3795405e/">часть 2 статьи 162 Уголовного Кодекса РФ</a><span> «Разбой, совершенный группой лиц по предварительному сговору…», </span><span><b>и наказание за него будет составлять уже  лишение свободы на срок до 10 лет со штрафом в размере до 1 миллиона рублей!</b></span><span> Вот так вот из безобидных и смешных персонажей Винни Пух и Пятачок превращаются в опасных преступников, работающих в банде!</span></p>
 					<div class="clear-both"></div>
 					<p><span class="ml-4">Снова возвращаемся к Льву Николаевичу Толстому, но уже к другому его произведению, а именно к повести «Анна Каренина». Если вы помните, то в конце повести Анна бросается под поезд из-за вечных терзаний по поводу своего возлюбленного Вронского. Сам Вронский уделял Анне довольно мало внимания и практически не реагировал на ее просьбы о помощи. То есть, Вронский знал, что Анна испытывает из-за него душевные страдания и никак не хотел это исправить, а наоборот, лишь усугублял ситуацию. А значит, действия Вронского попадают под </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/bddefeedee59e3a0cd80ee378c510bee13dabeb0/">подпункт «а» части 2 статьи 110 УК РФ</a><span>, а именно «Доведение до самоубийства, совершенное в отношении лица, заведомо для виновного находящегося в беспомощном состоянии», </span><span><b>и за такой тяжкий грех Вронский отправился бы в тюрьму аж на 15 лет!</b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-left mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_4.webp" alt="Герой нашего времени"></p>
+					<p><img class="w-80 h-auto float-left mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_4.webp" alt="Герой нашего времени"></p>
 					<p><span>Теперь рассмотрим не менее великого русского писателя — Михаила Юрьевича Лермонтова. В его повести «Герой нашего времени» можно проследить любовную линию между главным главным героем Печориным и красавицей Беллой. В итоге, Печорин из своих любовных порывов похищает Беллу из родительского дома. Да, можно сказать, что он это сделал из-за того, что Белла была восточной национальности, а у них это попросту принято. Однако здесь нет места таким традициям, хотя бы потому, что вся семья девушки была против этого и не поддержала решение Печорина. Соответственно, такие действия главного героя можно квалифицировать, как</span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/fbdb5e8eb268dd7d0bd2dc4e63ac9ac2d33c7cde/"> статью 126 Уголовного Кодекса РФ</a><span> «Похищение человека», </span><span><b>и наказан он был бы на целых 5 лет лишения свободы!</b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_5.webp" alt="Муму"></p>
+					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_5.webp" alt="Муму"></p>
 					<p><span>Последним рассмотрим повесть Ивана Сергеевича Тургенева «Муму». В конце повести крепостной крестьянин Герасим топит свою любимую собаку «Муму» из-за того, что его Барыня потребовала от него таких действий. Здесь на лицо сразу 2 преступления и сразу 2 нарушителя! С одной стороны, самого Герасима можно привлечь по </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/6e2829afe7edbdbbe54047b79b4784ca6cc45d53/">статье 245 УК РФ </a><span>«Жестокое обращение с животными»,</span><span><b> и наказан он должен быть лишением свободы на срок до 3 лет.</b></span><span> Но с другой стороны, сама Барыня натолкнула его на это преступление, а значит в соответствии </span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/532f51ea20198ae2b835bac571c1996fafe177ba/">со статьей 33 Уголовного Кодекса</a><span>, </span><span><b>она является подстрекательницей и несет равное вместе с самим Герасимом наказание!</b></span></p>
 					<p>Вот так вот, казалось бы, персонажи всеми любым произведений отечественных авторов могут в одночасье стать самыми злостными преступниками!<br>
 					<u>Не совершайте их ошибок и руководствуйтесь в первую очередь не своими эмоциями и переживаниями, а здравым рассудком и законом!</u></p>
@@ -272,18 +274,18 @@ export default {
 				"content_en": `
 					<p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recently I thought: “What would happen if Russian legislation were valid not only in the real world, but also in the world of beloved books by Russian authors?” </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">How many characters we have long known and loved would have to be sent to places not so distant?</font></font></b></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> And after delving a little into classical literature and Soviet cartoons, I’m ready to present to you my top five characters who violated Russian legislation. </font></font></span><br>
 					<div class="clear-both"></div>
-					<img class="w-80 h-auto float-left mt-4 mr-4 mb-4" decoding="async" class="aligncenter" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_1200.webp" alt="War and Peace"><br>
+					<img class="w-80 h-auto float-left mt-4 mr-4 mb-4" decoding="async" class="aligncenter" src="//mylaw.fun/wp-content/uploads/2021/08/scale_1200.webp" alt="War and Peace"><br>
 					<span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Let's plunge into the world of Leo Nikolayevich Tolstoy's great story “War and Peace” and remember the very episode when Nikolai Rostov and Dolokhov decided to play cards, and Nikolai ended up losing quite a large amount. In this episode, it is worth noting that they did not play in some casino, but, as the story itself says, in an English hotel. In other words, modern lawyers would classify such actions as</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/b20820739fab5a2c2645f2c2dba2d73e9025f6e4/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article 171.2 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, namely: “Illegal organization and conduct of gambling,” and </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dolokhov, as the organizer of this event, would have gone to prison for as long as 2 years or would have been forced to pay a fine of up to 500 thousand modern rubles!</font></font></b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp" alt="Winnie the Pooh and heels"></p>
+					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_1200-1.webp" alt="Winnie the Pooh and heels"></p>
 					<p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Next, let's look at Boris Zakhoder's already beloved Soviet story about Winnie the Pooh. “Piglet, do you have a gun at home?” - it would seem that this is an ordinary funny phrase that has become popular among the people, but how much illegality there is in it... Firstly, from this phrase it becomes clear that Piglet himself kept a gun at home, which can already be qualified as</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/fb522826ace216c139340de9ed06214ba989c656/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article 222 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“Illegal acquisition, transfer, sale, storage, transportation or carrying of weapons, their main parts, ammunition,” and </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the punishment for this is imprisonment for up to 4 years along with a fine of up to 80 thousand rubles.</font></font></b></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Secondly, they wanted to use this gun to extract honey from bees, and this can already be considered as</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/0b1063e4835ba9d69ebc8556c87031cd3795405e/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Part 2 of Article 162 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“Robbery committed by a group of persons by prior conspiracy...”, </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">and the punishment for it will be imprisonment for up to 10 years with a fine of up to 1 million rubles!</font></font></b></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> This is how Winnie the Pooh and Piglet turn from harmless and funny characters into dangerous criminals working in a gang!</font></font></span></p>
 					<div class="clear-both"></div>
 					<p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">We return again to Lev Nikolaevich Tolstoy, but to another of his works, namely the story “Anna Karenina”. If you remember, at the end of the story Anna throws herself under a train because of her eternal torment over her beloved Vronsky. Vronsky himself paid little attention to Anna and practically did not respond to her requests for help. That is, Vronsky knew that Anna was experiencing mental suffering because of him and did not want to fix it, but, on the contrary, only aggravated the situation. This means that Vronsky’s actions fall under</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/bddefeedee59e3a0cd80ee378c510bee13dabeb0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">subparagraph “a” of Part 2 of Article 110 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, namely “Incitement to suicide committed against a person known to be in a helpless state by the perpetrator,” </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">and for such a grave sin Vronsky would have gone to prison for as much as 15 years!</font></font></b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-left mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_4.webp" alt="Hero of our time"></p>
+					<p><img class="w-80 h-auto float-left mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_4.webp" alt="Hero of our time"></p>
 					<p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Now let's look at an equally great Russian writer - Mikhail Yuryevich Lermontov. In his story “A Hero of Our Time” you can trace the love line between the main protagonist Pechorin and the beautiful Bella. As a result, Pechorin, out of his love impulses, kidnaps Bella from her parents' house. Yes, we can say that he did this because Bella was of Eastern nationality, and this is simply accepted among them. However, there is no place for such traditions here, if only because the girl’s entire family was against this and did not support Pechorin’s decision. Accordingly, such actions of the protagonist can be qualified as</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/fbdb5e8eb268dd7d0bd2dc4e63ac9ac2d33c7cde/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article 126 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“Kidnapping”, </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">and he would have been punished for 5 years in prison!</font></font></b></span></p>
 					<div class="clear-both"></div>
-					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="http://mylaw.fun/wp-content/uploads/2021/08/scale_5.webp" alt="Mu Mu"></p>
+					<p><img class="w-80 h-auto float-right mr-4 mb-4" decoding="async" src="//mylaw.fun/wp-content/uploads/2021/08/scale_5.webp" alt="Mu Mu"></p>
 					<p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lastly, let’s look at the story “Mumu” &ZeroWidthSpace;&ZeroWidthSpace;by Ivan Sergeevich Turgenev. At the end of the story, the serf peasant Gerasim drowns his beloved dog “Mumu” &ZeroWidthSpace;&ZeroWidthSpace;because his Lady demanded such actions from him. There are 2 crimes and 2 violators at once! On the one hand, Gerasim himself can be attracted by</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/6e2829afe7edbdbbe54047b79b4784ca6cc45d53/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Article 245 of the Criminal Code of the Russian Federation </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“Cruelty to animals”, </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">and he should be punished by imprisonment for up to 3 years.</font></font></b></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> But on the other hand, the Lady herself prompted him to commit this crime, which means, in accordance</font></font></span><span></span><a class="text-indigo-600 text-sm hover:underline" rel="noopener nofollow" target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_10699/532f51ea20198ae2b835bac571c1996fafe177ba/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">with Article 33 of the Criminal Code </font></font></a><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, </font></font></span><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">she is an instigator and bears equal punishment along with Gerasim himself!</font></font></b></span></p>
 					<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">So, it would seem, characters from any works of domestic authors can suddenly become the worst criminals! </font></font><br>
 					<u><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Don’t make their mistakes and be guided primarily not by your emotions and experiences, but by common sense and the law!</font></font></u></p>				
@@ -292,15 +294,32 @@ export default {
 		],
 		selectedArticleId: null,
 	},
-	getters: {
-		getSelectedArticle: (state) => {
-			return state.articles.find(article => article.id === state.selectedArticleId);
-		}
-	},
-	mutations: {
-		setSelectedArticle(state, articleId) {
-			state.selectedArticleId = articleId;
-		}
-	}
+getters: {
+    getSelectedArticle: (state) => {
+      const article = state.allArticles.find(article => article.id === state.selectedArticleId);
+      if (article) {
+        return {
+          ...article,
+          url: article.url ? config.getUploadUrl(article.url.replace('//mylaw.fun/wp-content/uploads/', '')) : '',
+          thumbnailUrl: article.thumbnailUrl ? config.getUploadUrl(article.thumbnailUrl.replace('//mylaw.fun/wp-content/uploads/', '')) : '',
+          content_ru: article.content_ru ? article.content_ru.replace(/src="\/\/mylaw\.fun\/wp-content\/uploads\//g, `src="${config.baseUrl}/wp-content/uploads/`) : '',
+          content_en: article.content_en ? article.content_en.replace(/src="\/\/mylaw\.fun\/wp-content\/uploads\//g, `src="${config.baseUrl}/wp-content/uploads/`) : ''
+        };
+      }
+      return null;
+    },
+    getAllArticlesWithConfig: (state) => {
+      return state.allArticles.map(article => ({
+        ...article,
+        url: article.url ? config.getUploadUrl(article.url.replace('//mylaw.fun/wp-content/uploads/', '')) : '',
+        thumbnailUrl: article.thumbnailUrl ? config.getUploadUrl(article.thumbnailUrl.replace('//mylaw.fun/wp-content/uploads/', '')) : ''
+      }));
+    }
+  },
+  mutations: {
+    setSelectedArticle(state, articleId) {
+      state.selectedArticleId = articleId;
+    }
+  }
 
 }

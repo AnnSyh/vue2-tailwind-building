@@ -10,7 +10,7 @@
                 <span>- 
                     <a  class="text-indigo-600 text-xs uppercase hover:underline" 
                         target="_blank" 
-                        href="http://mylaw.fun/wp-content/uploads/2021/11/PenPaper-scaled.jpg" 
+                        :href="config.getUploadUrl(2021/11/PenPaper-scaled.jpg)" 
                         data-fancybox="images"
                     >
                     <!-- Участник VI Всероссийского конкурса на лучшую студенческую научную работу по административному праву и процессу -->
@@ -32,7 +32,7 @@
                 <span>- 
                     <a  class="text-indigo-600 text-xs uppercase hover:underline" 
                         target="_blank" 
-                        href="http://mylaw.fun/wp-content/uploads/2021/11/PenPaper-scaled.jpg" 
+                        :href="config.getUploadUrl(2021/11/PenPaper-scaled.jpg)" 
                         data-fancybox="images"
                     >
                     <!-- Полуфиналист всероссийского кейс-чемпионата по семейному праву «Kutafin Legal Cup» -->
@@ -58,7 +58,7 @@
 </template>
 
 <script>
-
+import config from '@/config'
 
 export default {
 	name: 'extracurricular-activities-achievements',
@@ -67,7 +67,7 @@ export default {
      },
     data() {
       return {
-        
+         config: config,
       }
     },
 	methods: {

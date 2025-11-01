@@ -22,7 +22,6 @@ export default [
     {
         "id": 1,
         "title": "Экзекватура иностранных судебных решений в России в условиях отсутствия межгосударственного соглашения об их признании",
-        // "url": "https://mylaw.fun/wp-content/uploads/2021/09/scale_1200.webp",
         "text":`<p>Для лучшего освещения данного вопроса, стоит привести в пример решение
         конкретной ситуации. Допустим супруги, имели право развестись в Великобритании.
         Британский суд удовлетворил их интересы и выдал решение о расторжении между ними
@@ -77,7 +76,7 @@ export default [
     {
         "id": 4,
         "title": i18n.t("ChangesInTheProcedure"),
-        "url": "https://mylaw.fun/wp-content/uploads/2021/08/medosmotr.jpg",
+        "url": "config.getUploadUrl('/wp-content/uploads/2021/08/medosmotr.jpg')",
         "text":"Содержание 4 статьи",
     },
   ]
