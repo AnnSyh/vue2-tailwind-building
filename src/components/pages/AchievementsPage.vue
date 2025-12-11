@@ -1,7 +1,7 @@
 <template>
-	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white">
+	<div class="container m-auto bg-white1 dark:bg-gray-700 dark:text-white glass">
 		<div class="mx-auto my-12 px-4">
-			<h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 dark:text-white">{{$t('achievements')}}</h2>
+			<!-- <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 dark:text-white">{{$t('achievements')}}</h2> -->
 			<!-- Slider main container -->
 			<div ref="swiper" class="swiper">
 				<div class="swiper-wrapper">
@@ -117,6 +117,12 @@ export default {
 }
 .swiper-slide {
 	@apply flex;
+}
+.glass  {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded border md:shadow w-full overflow-hidden" >
+	<div class="rounded border md:shadow w-full overflow-hidden bg-white" >
 		<div>
 			
 			<router-link
@@ -34,7 +34,7 @@
 			<!-- <p> {{article.url}} </p> -->
 			<!-- <p>searchInput = {{searchInput}}</p> -->
 			<TagsBlock :tags="article.tags" :isSelect="isSelect"/>
-			<h3 class="font-semibold text-gray-800 my-4 text-lg dark:text-white">
+			<h3 class="font-semibold text-gray-800 my-4 text-lg">
 				<div v-html="highlightText($t(article.title), searchInput)"></div>
 			</h3>
 

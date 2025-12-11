@@ -1,5 +1,5 @@
 <template>
-	<div class="container m-auto">
+	<div class="container m-auto glass">
 
 		<div class="mx-auto my-12 px-4">
 			<div class="overflow-x-auto flex whitespace-nowrap">
@@ -72,12 +72,19 @@ export default {
 	}
 	.tab {
 		@apply p-4 overflow-y-auto h-screen;
-		max-height: calc(100vh - 200px);
+		max-height: calc(100vh - 203gitpx);
 		/* @apply flex-none min-w-full px-4 overflow-hidden lg:overflow-auto scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded ; */
 		/* @apply scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded  max-h-96 ; */
 	}
 	a {
 		@apply text-indigo-600;
 	}
+
+    .glass  {
+        background: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.2); 
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
 
 </style>

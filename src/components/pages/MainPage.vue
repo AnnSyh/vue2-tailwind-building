@@ -1,5 +1,5 @@
 <template>
-	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white h-screen" >
+	<div class="container m-auto bg-white1 dark:bg-gray-700 dark:text-white h-screen1 height-index" >
 		<!-- <p>{{$t('main-page') | to-uppercase}}</p>
 		<p>{{$t('hello')}}</p> -->
 		<div class="grid-wrapper">
@@ -66,8 +66,8 @@ export default {
 /* ----------------------------- */
 .animation {
    transition: all 0.2s ease-in; 
-   position: relative; /* Добавляем для псевдоэлемента */
-   overflow: hidden; /* Обрезаем всё что выходит за границы */
+   position: relative; 
+   overflow: hidden; 
 }
 .animation:hover {
   transition: all 0.2s ease-out;
@@ -133,10 +133,6 @@ export default {
 	@apply h-9 md:h-16 lg:h-24;
 }
 
-/* .container {
-	height: calc(100% - 130px);
-} */
-
 .grid-wrapper {
 	@apply flex m-auto justify-center items-center;
 	max-width: 800px;
@@ -154,6 +150,10 @@ export default {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-}	
+}
+
+.height-index {
+    height: calc(100vh - 130px);
+}
 
 </style>

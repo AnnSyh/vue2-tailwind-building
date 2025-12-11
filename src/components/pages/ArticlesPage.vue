@@ -1,5 +1,8 @@
 <template> <!-- 4 -кол-во карточек в строчку -->
-	<div class="container m-auto bg-white dark:bg-gray-700 dark:text-white"
+	<!-- <div class="container m-auto bg-white1 glass1 dark:bg-gray-7001 dark:text-white1"
+		:class="{'h-content' : (filteredArticles.length <= 4)}" 
+	> -->
+	<div class="container m-auto"
 		:class="{'h-content' : (filteredArticles.length <= 4)}" 
 	>
 
@@ -98,6 +101,12 @@ export default {
 <style scoped>
 .h-content {
 	height: calc(100vh - 130px);
+}
+.glass  {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 </style>

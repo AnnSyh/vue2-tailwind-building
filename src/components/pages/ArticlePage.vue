@@ -1,5 +1,5 @@
 <template> 
-	<div class="container mx-auto">
+	<div class="container mx-auto glass">
 
 		<div class="mt-12 mb-20 px-4 ">
 			<!-- <p>$store.state.allArticles = {{ $store.state.allArticles }}</p> -->
@@ -70,5 +70,10 @@ export default {
 </script>
 
 <style scoped>
-
+    .glass  {
+        background: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.2); 
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
 </style>
