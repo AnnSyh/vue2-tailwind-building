@@ -11,10 +11,10 @@
 				class="tilt-card animation"
 			>
 				<div class="grid grid-cols-12 gap-3 w-full h-full px-5 py-6">
-					<div class="col-span-12 sm:col-span-7 flex justify-center">
+					<div class="col-span-12 sm:col-span-7 flex lg:justify-start sm:pl-8">
 						<div class="person-info  h-full">
 							<div class="person-info-col">
-								<img class="h-40 rounded-full" src="@/assets/images/IvanSukharevskiy.jpg" alt="person" >
+								<img class="rounded-full" width="124" height="160" src="@/assets/images/IvanSukharevskiy.jpg" alt="person" >
 							</div>
 							<div class="person-info-col">
 								<p class="text-light-gray lg:text-lg">{{$t('SukharevskiyIvan')}}</p>
@@ -35,7 +35,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-span-12 sm:col-span-5 m-auto">
+					<div class="col-span-12 sm:col-span-5 flex justify-center sm:justify-end">
 						<!-- <img class="max-h-56 m-auto" src="@/assets/images/legalScales1.png" alt="person" fill="#e5e7eb"  > -->
 						<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
 							<image 
