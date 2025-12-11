@@ -1,5 +1,5 @@
 <template>
-	<div class="container m-auto bg-white1 dark:bg-gray-700 dark:text-white h-screen1 height-index" >
+	<div class="container m-auto dark:text-white height-index" >
 		<!-- <p>{{$t('main-page') | to-uppercase}}</p>
 		<p>{{$t('hello')}}</p> -->
 		<div class="grid-wrapper">
@@ -154,6 +154,12 @@ export default {
 
 .height-index {
     height: calc(100vh - 130px);
+}
+.glass {
+    background: hsla(0, 0%, 100%, .1);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
 }
 
 </style>
