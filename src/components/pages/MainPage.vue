@@ -153,7 +153,9 @@ export default {
 }
 
 .height-index {
-    height: calc(100vh - 130px);
+    @screen sm {
+        height: calc(100vh - 130px);
+    }
 }
 .glass {
     background: hsla(0, 0%, 100%, .1);

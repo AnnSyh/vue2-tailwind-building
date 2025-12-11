@@ -1,5 +1,5 @@
 <template>
-	<nav class="bg-gray-800">
+	<nav class="bg-gray-800 relative z-10">
 		<div class="container m-auto flex items-center p-3 flex-wrap">
 
 			<div class="mr-auto relative group">
