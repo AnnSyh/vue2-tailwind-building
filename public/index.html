@@ -7,21 +7,20 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body class="bg-fon dark:bg-gray-700 dark:text-white flex flex-col h-full"
-        :class="{'dark': isDarkMode}"
+  <body class="bg-[#dadada] dark:bg-gray-700 dark:text-white flex flex-col h-full"
   >
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app" ></div>
+    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
   <style>
         .bg-fon {
-            background-image: url('<%= BASE_URL %>images/new-year.png');
+            background-image: url('<%= BASE_URL %>images/test101.jpg');
             background-size: cover;
-            background-position: center top;
-            background-repeat: repeat-y;
+            background-position: center ;
+            background-repeat: no-repeat;
             height: 100vh;
             width: 100%;
         }

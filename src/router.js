@@ -23,12 +23,16 @@ const routes = [
 		component: () => import('./components/pages/AchievementsPage.vue')
 	},
 	{
+		path: '/achievementscopy',
+		component: () => import('./components/pages/AchievementsPageCopy.vue')
+	},
+	{
 		path: '/articles',
 		component: () => import('./components/pages/ArticlesPage.vue')
 	},
-	{ 
-		path: '/articles/:id', 
-		component: () => import('./components/pages/ArticlePage.vue') 
+	{
+		path: '/articles/:id',
+		component: () => import('./components/pages/ArticlePage.vue')
 	}
 
 ]

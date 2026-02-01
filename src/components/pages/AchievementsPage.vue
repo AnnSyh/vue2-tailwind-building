@@ -1,5 +1,5 @@
 <template>
-	<div class="container m-auto bg-white1 dark:bg-gray-700 dark:text-white glass">
+	<div class="container m-auto bg-white1 dark:bg-gray-700 dark:text-white">
 		<div class="mx-auto my-12 px-4">
 			<!-- <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 dark:text-white">{{$t('achievements')}}</h2> -->
 			<!-- Slider main container -->
@@ -7,11 +7,11 @@
 				<div class="swiper-wrapper">
 					<!-- Slides -->
 					<div v-for="(item, index) in images" :key="index" class="swiper-slide">
-						<img 
-							class="swiper-slide-img" 
-							:src="item.src" 
+						<img
+							class="swiper-slide-img"
+							:src="item.src"
 							alt="Slide"
-							@click="showModalWindow(index)" 
+							@click="showModalWindow(index)"
 						>
 					</div>
 				</div>
@@ -47,12 +47,15 @@ export default {
 				{src: config.getUploadUrl('/2025/10/photo_2025-10-31_09-48-45-1.jpg')},
 				{src: config.getUploadUrl('/2022/03/aktion-1.jpeg')},
 				{src: config.getUploadUrl('/2022/03/aktion.jpeg')},
+
 				{src: config.getUploadUrl('/2022/03/0001-1-scaled.jpg')},
 				{src: config.getUploadUrl('/2022/03/ПравовойДиктант-1-scaled.jpg')},
 				{src: config.getUploadUrl('/2022/03/0001-scaled.jpg')},
+
 				{src: config.getUploadUrl('/2022/05/TIN.jpg')},
 				{src: config.getUploadUrl('/2022/05/SertifikatK.jpg')},
 				{src: config.getUploadUrl('/2021/11/PenPaper-scaled.jpg')},
+
 				{src: config.getUploadUrl('/2021/10/0001-scaled.jpg')},
 				{src: config.getUploadUrl('/2021/08/гарант.jpg')},
 				{src: config.getUploadUrl('/2021/08/Консультант.jpg')},
@@ -101,7 +104,7 @@ export default {
 	}
 }
 
-	
+
 </script>
 
 <style scoped>
@@ -118,11 +121,6 @@ export default {
 .swiper-slide {
 	@apply flex;
 }
-.glass  {
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
+
 
 </style>
