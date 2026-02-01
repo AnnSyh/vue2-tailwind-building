@@ -1,6 +1,5 @@
 <template>
-    <!-- :class="{'dark': isDarkMode, 'bg-fon': isIndexPage}" -->
-    <div id="app">
+    <div id="app" :class="{'dark': isDarkMode, 'bg-fon': isIndexPage}">
         <Navbar />
         <router-view />
         <Footer />
@@ -16,8 +15,8 @@ export default {
     name: 'App',
     data() {
         return {
-            isIndexPage: true, // Используйте переменную для определения гл стр
-            isDarkMode: false, // Используйте переменную для определения активной темы
+            isIndexPage: true,
+            isDarkMode: false,
             pageTitle: 'sukharevskiy.ru' // Задаем начальное значение заголовка
         }
     },
@@ -39,7 +38,6 @@ export default {
             document.title = 'sukharevskiy.ru' + this.$route.path
         },
         checkIfIndexPage() {
-            // Проверяем, является ли текущий маршрут главной страницей
             this.isIndexPage = this.$route.path === '/' ;
         }
     }

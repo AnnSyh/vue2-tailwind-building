@@ -1,17 +1,17 @@
-<template> 
-	<div class="container mx-auto glass">
+<template>
+	<perfect-scrollbar class="perfect-scrollbar tab container mx-auto">
 
 		<div class="mt-12 mb-20 px-4 ">
 			<!-- <p>$store.state.allArticles = {{ $store.state.allArticles }}</p> -->
 			<h1 class="text-2xl md:text-3xl mb-8 mt-16 font-serif max-w-3xl mx-auto dark:text-white">
-				{{ $t(article.title) }} 
+				{{ $t(article.title) }}
 			</h1>
 			<div class="mb-8 px-2 w-full flex justify-between">
 				<a href="/articles" class="text-indigo-600 text-sm hover:underline">
 					<!-- <span class="inline-block transform rotate-180">→</span> Все статьи  -->
-					<span class="inline-block transform rotate-180">→</span> {{ $t('allArticles') }} 
+					<span class="inline-block transform rotate-180">→</span> {{ $t('allArticles') }}
 				</a>
-				
+
 			</div>
 			<div>
 				<div v-if="article.url" class="flex flex-col float-left">
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 
-	</div>
+	</perfect-scrollbar>
 </template>
 
 <script>
@@ -66,14 +66,12 @@ export default {
 	},
 
 }
-	
+
 </script>
 
 <style scoped>
-    .glass  {
-        background: rgba(255, 255, 255, 0.1); 
-        backdrop-filter: blur(10px); 
-        border: 1px solid rgba(255, 255, 255, 0.2); 
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
+	.tab {
+		@apply p-4 overflow-y-auto h-screen;
+		max-height: calc(100vh - 129px);
+	}
 </style>

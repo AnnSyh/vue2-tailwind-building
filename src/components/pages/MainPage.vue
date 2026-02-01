@@ -4,10 +4,10 @@
 		<p>{{$t('hello')}}</p> -->
 		<div class="grid-wrapper">
             <!-- class="tilt-card has-animation has-animation-blink" -->
-			<tilt 
-				data-tilt data-tilt-reverse="true" 
-				data-tilt-perspective="500"  
-				data-tilt-max="10" 
+			<tilt
+				data-tilt data-tilt-reverse="true"
+				data-tilt-perspective="500"
+				data-tilt-max="10"
 				class="tilt-card animation"
 			>
 				<div class="grid grid-cols-12 gap-3 w-full h-full px-5 py-6">
@@ -25,10 +25,10 @@
 								<p class="text-light-gray lg:text-lg">{{$t('Assistantlawyer')}}</p>
 								<p class="text-light-gray lg:text-lg">
 									<a href="https://asnis.ru/" target="_blank">
-										<img 
-											class="h-40 rounded-full" 
-											src="@/assets/images/logo_asnis.svg" 
-											alt="person" 
+										<img
+											class="h-40 rounded-full"
+											src="@/assets/images/logo_asnis.svg"
+											alt="person"
 											style="width: 345px; height: 40px;">
 									</a>
 								</p>
@@ -38,11 +38,11 @@
 					<div class="col-span-12 sm:col-span-5 flex justify-center sm:justify-end">
 						<!-- <img class="max-h-56 m-auto" src="@/assets/images/legalScales1.png" alt="person" fill="#e5e7eb"  > -->
 						<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
-							<image 
+							<image
 								x="0" y="0" width="300" height="300" alt=""
 								:href="this.$i18n.locale === 'en' ? require('@/assets/images/stamp-txt-en.svg') : require('@/assets/images/stamp-txt.svg')"
 							/>
-							<image href="@/assets/images/stamp-img.svg" x="85" y="85" width="130" height="130" alt="" /> 
+							<image href="@/assets/images/stamp-img.svg" x="85" y="85" width="130" height="130" alt="" />
 						</svg>
 
 					</div>
@@ -65,9 +65,9 @@ export default {
 <style scoped>
 /* ----------------------------- */
 .animation {
-   transition: all 0.2s ease-in; 
-   position: relative; 
-   overflow: hidden; 
+   transition: all 0.2s ease-in;
+   position: relative;
+   overflow: hidden;
 }
 .animation:hover {
   transition: all 0.2s ease-out;
@@ -85,7 +85,7 @@ export default {
   position: absolute;
   top: -25%; /* Смещаем вверх чтобы покрыть наклон */
   left: 0%;
-  
+
   opacity: 0;
   background: white;
   box-shadow: 0 0 30px 10px white; /* Увеличиваем размытие */
@@ -157,11 +157,6 @@ export default {
         height: calc(100vh - 130px);
     }
 }
-.glass {
-    background: hsla(0, 0%, 100%, .1);
-    backdrop-filter: blur(10px);
-    border: 1px solid hsla(0, 0%, 100%, .2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
-}
+
 
 </style>

@@ -1,9 +1,9 @@
 <template> <!-- 4 -кол-во карточек в строчку -->
 	<!-- <div class="container m-auto bg-white1 glass1 dark:bg-gray-7001 dark:text-white1"
-		:class="{'h-content' : (filteredArticles.length <= 4)}" 
+		:class="{'h-content' : (filteredArticles.length <= 4)}"
 	> -->
-	<div class="container m-auto"
-		:class="{'h-content' : (filteredArticles.length <= 4)}" 
+	<perfect-scrollbar class="perfect-scrollbar tab container m-auto"
+		:class="{'h-content' : (filteredArticles.length <= 4)}"
 	>
 
 		<div class="mx-auto my-12 px-4">
@@ -22,15 +22,15 @@
 						class="text-center cursor-pointer"
 				>
 					<button
-							@click="filteredArticle(tag.name)" 
-							:class="[{'border border-black': isSelect === tag.name }, 
+							@click="filteredArticle(tag.name)"
+							:class="[{'border border-black': isSelect === tag.name },
 									'text-' + tag.color + '-500 bg-' + tag.color + '-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap']"
 						>
-					{{ $t(tag.name) }} 
+					{{ $t(tag.name) }}
 					</button>
 				</div>
                 <button
-                    @click="filteredSbros()" 
+                    @click="filteredSbros()"
                     :class="'text-red-500 bg-red-200 h-10 rounded px-2 py-1 text-xs whitespace-nowrap'"
                 >
                 <!-- reset filters -->
@@ -43,16 +43,16 @@
 				:placeholder="$t('searchByArticleTitles')">
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-				<ArticleCard v-for="(article, index) in filteredArticles" 
+				<ArticleCard v-for="(article, index) in filteredArticles"
 					:searchInput="searchInput"
-					:key="index" 
-					:article="article" 
-					:isSelect="isSelect" 
+					:key="index"
+					:article="article"
+					:isSelect="isSelect"
 				/>
 			</div>
 		</div>
 
-	</div>
+	</perfect-scrollbar>
 </template>
 
 <script>
@@ -78,7 +78,7 @@ export default {
 				const matchesTitle = this.$t(article.title).toLowerCase().includes(this.searchInput.toLowerCase())
 				const matchesTag = !this.filterTag || article.tags.includes(this.filterTag);
 				return matchesTitle && matchesTag;
-				}	
+				}
 			);
 		},
 
@@ -102,11 +102,10 @@ export default {
 .h-content {
 	height: calc(100vh - 130px);
 }
-.glass  {
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
+
+.tab {
+		@apply p-4 overflow-y-auto h-screen;
+		max-height: calc(100vh - 129px);
+	}
 
 </style>
