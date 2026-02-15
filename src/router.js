@@ -20,11 +20,11 @@ const routes = [
 	},
 	{
 		path: '/achievements',
-		component: () => import('./components/pages/AchievementsPage.vue')
+		component: () => import('./components/pages/AchievementsPageCopy')
 	},
 	{
 		path: '/achievementscopy',
-		component: () => import('./components/pages/AchievementsPageCopy.vue')
+		component: () => import('./components/pages/AchievementsPage.vue')
 	},
 	{
 		path: '/articles',
