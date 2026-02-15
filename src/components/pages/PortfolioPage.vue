@@ -71,7 +71,7 @@ export default {
 		@apply bg-green-400 dark:bg-yellow-400 text-white;
 	}
 	.tab {
-		@apply p-4 overflow-y-auto h-screen;
+		@apply overflow-y-auto h-screen;
 		max-height: calc(100vh - 203px);
 	}
 	a {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-4">
     <p>
         МОСКОВСКАЯ ГОСУДАРСТВЕННАЯ ЮРИДИЧЕСКАЯ АКАДЕМИЯ (МГЮА),<br>
         ИНСТИТУТ ЧАСТНОГО ПРАВА,<br>
@@ -29,7 +29,7 @@ export default {
         counter: 0,
         timer: null,
         targetNumber: 87.1,
-        
+
       }
     },
     mounted() {
@@ -45,7 +45,7 @@ export default {
       clearInterval(this.timer);
     },
   }
-	
+
 </script>
 <style scoped>
   #wrapper {
