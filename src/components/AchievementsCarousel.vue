@@ -122,6 +122,42 @@ const teamMembers = [
     id: 9,
     name: 'Achievement 9',
     image: config.getUploadUrl('/2021/11/PenPaper-scaled.jpg')
+  },
+
+  {
+    id: 10,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/10/0001-scaled.jpg')
+  },
+  {
+    id: 11,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/гарант.jpg')
+  },
+  {
+    id: 12,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/Консультант.jpg')
+  },
+  {
+    id: 13,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/Sukharevskiy1024_1.jpg')
+  },
+  {
+    id: 14,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/Sukharevskomu_Ivanu_Ivanovichu_page-0001.jpg')
+  },
+  {
+    id: 15,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/certificate-1.jpg')
+  },
+  {
+    id: 16,
+    name: 'Achievement 9',
+    image: config.getUploadUrl('/2021/08/Geneve-scaled.jpg')
   }
 ].map(member => ({
   ...member,
